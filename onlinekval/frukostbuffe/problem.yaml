@@ -1,0 +1,10 @@
+author: Emanuel Gedin
+source: Programmeringsolympiadens onlinekval 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+type: scoring
+
+grading:
+    on_reject: grade
+    objective: max
+    range: 0 100

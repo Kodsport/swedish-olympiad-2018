@@ -1,0 +1,46 @@
+\problemname{Lisp till C}
+C är ett gammalt programmeringsspråk från 70-talet, som trots dess ålder är väldigt välanvänt.
+I språket skrivs funktionsanrop till en funktion med namnet \texttt{namn} på formen \texttt{namn(parameter1, parameter2, ..., parameterN)}.
+En parameter kan antingen vara en variabel (som i vårt fall består av en sekvens av tecken \texttt{a-z}), eller ett funktionsanrop i sig.
+T.ex. kan ett fullständigt funktionsanrop se ut på följande vis:
+\begin{verbatim}
+a(b, c(d), e(f, g(h, i, j)))
+\end{verbatim}
+Ett funktionsanrop utan parametrar skrivs som \texttt{funktion()}.
+
+Lisp är ett annat programmeringsspråk från 50-talet.
+I språket skrivs funktionsanrop till en funktion med namnet \texttt{namn} på formen \texttt{(namn parameter1 parameter2 ... parameter N)}.
+Återigen kan en parameter i sig vara en variabel eller ett funktionsanrop.
+Funktionsanropet i C som beskrivs ovan kan istället skrivas
+\begin{verbatim}
+(a b (c d) (e f (g h i j)))
+\end{verbatim}
+Ett funktionsanrop utan parametrar skrivs som \texttt{(funktion)}.
+
+Varför denna språkhistoria?
+Jo, det visar sig att domaren Simon gillar C, men inte Lisp.
+Domaren Johan, å andra sidan, gillar Lisp, men inte C.
+
+Simon blev därför väldigt sur när Johan programmerade alla sina exempellösningar i Lisp, och vill konvertera Johans program till C.
+Hjälp Simon med detta, genom att skriva ett program som, givet ett funktionsanrop i Lisp konverterar det till ett funktionsanrop i C.
+
+\section*{Indata}
+Indatan består av en rad med ett korrekt formaterat funktionsanrop i Lisp-format, högst $100\,000$ tecken lång.
+Alla parametrar kommer att vara separerade med exakt ett blanksteg, och det finns inga extra blanksteg där det inte behövs.
+
+\section*{Utdata}
+Skriv ut en enda rad, med funktionsanropet konverterat till C-format.
+Inkludera ett blanksteg efter varje kommatecken, som i exempelfallen.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\begin{tabular}{|l|l|l|}
+\hline
+Grupp & Poängvärde & Begränsningar \\ \hline
+1     & 16         & Ingen parameter i indatan är ett funktionsanrop. \\ \hline
+2     & 27         & Anropen är nästlade högst två nivåer: \texttt{(a (b) (c))} och \texttt{(a (b c))} kan förekomma, men inte \texttt{(a (b (c)))}. \\ \hline
+3     & 15         & Alla anrop har minst en parameter, och att alla variabler och funktionsnamn består av enbart en bokstav. \\ \hline
+4     & 28         & Indatan är högst $100$ tecken lång. \\ \hline
+5     & 14         & Inga speciella begränsningar. \\ \hline
+\end{tabular}

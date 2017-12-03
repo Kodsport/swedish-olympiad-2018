@@ -1,0 +1,57 @@
+\problemname{Frukostbuffé}
+Pär och Oskar ska äta frukostbuffé.
+Den består av $N$ olika rätter numrerade från $1$ till $N$.
+Dessa är placerade på rad på ett långt bord.
+Pär tycker att vissa rätter är godare än andra.
+Därför har han gett varje rätt ett betyg som beskriver hur god den är.
+Den $i$:te rätten har betyg $a_i$.
+
+I början väljer Pär en rätt och äter den. Sedan väljer Oskar en rätt och äter den.
+Båda är mycket hungriga, så de äter alltid upp allt som finns av sin valda rätt.
+
+När båda har ätit upp får de välja en ny rätt.
+Pär och Oskar tycker att det är jobbigt att gå så de väljer alltid en rätt som är precis bredvid den de just åt.
+D.v.s., om någon just ätit rätt $i$ kan han välja rätt $i-1$ eller $i+1$.
+Om den nya rätten inte är uppäten tar den som valde den och äter den.
+Om den redan är uppäten måste personen vänta till nästa tur.
+I varje tur är det Pär som väljer först.
+
+Pär vill inte vara kräsen, så han tänker inte gå förbi en rätt som finns kvar utan att äta den.
+Han är också som sagt mycket hungrig, så han vill alltid äta minst en rätt.
+Både Pär och Oskar har efter att ha ätit en rätt möjligheten att högt utropa "Nu är jag mätt!" och lämna frukosten utan att äta något mer.
+
+Frukosten är slut när alla rätter är uppätna eller båda har lämnat frukosten.
+Hur nöjd Per är beror på hur goda rätter han har ätit.
+Vi definierar hans nöjdhet som summan av betygen av alla rätter han åt.
+
+Pär vet inte riktigt hur Oskar kommer att bete sig.
+Därför vill han veta vilken maximala nöjdhet han kan garantera sig utan att veta något om Oskars beteende.
+
+\section*{Indata}
+Indatan börjar med en rad som innehåller antalet rätter $N$ i buffén.
+Därefter följer en rad med $N$ stycken heltal, varje rätts godhet $a_i$.
+
+\section*{Utdata}
+Programmet ska skriva ut ett heltal - den maximala nöjdhet Pär garanterat kan få.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 25         & $2 \le N \le 100$, $0 \le a_i \le 100$ \\ \hline
+2     & 25         & $2 \le N \le 1000$, $0 \le a_i \le 100$ \\ \hline
+3     & 25         & $2 \le N \le 300\,000$, $0 \le a_i \le 100$ \\ \hline
+4     & 25         & $2 \le N \le 300\,000$, $-100 \le a_i \le 100$ \\ \hline
+\end{tabular}
+
+\section*{Förklaring av sample}
+\subsection*{Sample 1}
+Om Pär väljer att börja med att äta någon av rätterna som ger $3$ eller $2$ skulle Oskar kunna äta upp all annan mat. Därför vill Pär istället börja i mitten, och kan då garanterat uppnå nöjdhet $7$.
+\subsection*{Sample 2}
+Bäst här är för Pär att börja med att välja rätten som ger 5. Beroende på vilken sida Oskar börjar på så kan Pär få antingen 8 eller 9 nöjdhet, alltså garanterat 8.
+\subsection*{Sample 3}
+I den sista testfallsgruppen kan rätter vara dåliga, och ge negativ nöjdhet. Även här är det bäst för Pär att börja på rätten som ger 5. Börjar Oskar till vänster om honom så kan Pär äta rätten som ger -1 och sedan den som ger 2, för en total nöjdhet på 6. Om Oskar börjar till höger om honom kan Pär äta -2, 3 och sedan vara nöjd, även det för en total nöjdhet på 6.
+\subsection*{Sample 4}
+Här är alla rätter dåliga, men Pär måste ändå äta något. Därför väljer han den minst dåliga rätten, och får nöjdhet -1.

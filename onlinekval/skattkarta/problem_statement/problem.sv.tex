@@ -1,0 +1,45 @@
+\problemname{Skattkartan}
+Paulina gillar Japan, jättemycket.
+Under en semester i Tokyo besöker hon en nöjespark där det finns en stor labyrint.
+För att navigera i labyrinten får Paulina en skattkarta som hon följer.
+
+På skattkartan är varje ruta markerad med pilar för att visa åt vilket håll man ska gå från den rutan.
+
+Paulina börjar alltid i den ruta som befinner sig längst upp till vänster på skattkartan, och följer därefter pilarna.
+I labyrinten finns det två olika mål: en bit smaskig laxsushi, samt en läskig samuraj.
+Det kan också hända att skattkartan leder runt Paulina i en oändlig cykel av rutor så hon aldrig når ett mål.
+
+Kan du hjälpa Paulina att avgöra vilket mål hon når, eller om hon kommer gå runt i all oändlighet.
+
+\section*{Indata}
+Indatan börjar med en rad som innehåller antalet rader $R$ i skattkartan.
+Därefter följer en rad som innehåller antalet kolumner $C$ i skattkartan.
+Slutligen följer $R$ rader som alla innehåller $C$ tecken vardera -- själva skattkartan.
+
+Följande tecken förekommer i skattkartan:
+\begin{itemize}
+\item ``\texttt{<}'' -- ruta med vänsterpil,
+\item ``\texttt{>}'' -- ruta med högerpil,
+\item ``\texttt{v}'' -- ruta med nedåtpil,
+\item ``$\wedge$'' -- ruta med uppåtpil,
+\item ``\texttt{A}'' -- rutan sushin befinner sig på,
+\item ``\texttt{B}'' -- rutan samurajen befinner sig på.
+\end{itemize}
+
+Paulina börjar på den första rutan i den första raden av skattkartan.
+Skattkartan är konstruerad så att Paulina aldrig kommer lämna labyrinten när hon följer pilarna.
+
+\section*{Utdata}
+Ditt program ska skriva ut en enda rad med texten 
+\begin{itemize}
+\item ``\texttt{sushi}'' om hon når sushin genom att följa pilarna,
+\item ``\texttt{samuraj}'' om hon når samurajen genom att följa pilarna,
+\item ``\texttt{cykel}'' om hon kommer springa runt i all oändlighet genom att följa pilarna.
+\end{itemize}
+
+\section*{Poängsättning}
+\begin{description}
+\item[40 poäng] Skattkartan är densamma som finns på \href{https://www.progolymp.se/2018/affisch.pdf}{vår affisch}.
+\item[30 poäng] Skattkartan kommer alltid leda antingen till sushin eller samurajen, och har högst 100 rader och kolumner.
+\item[30 poäng] Skattkartan har högst 100 rader och kolumner.
+\end{description}
