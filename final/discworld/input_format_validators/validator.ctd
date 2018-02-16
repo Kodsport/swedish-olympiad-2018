@@ -1,0 +1,26 @@
+INT(0,5) NEWLINE
+
+INT(1, 1000, n) SPACE INT(1, 1000000000) NEWLINE
+ASSERT(n % 2 == 1)
+
+REPI(i, n)
+    REPI(j, n, SPACE)
+        INT(-1, 1000000000, m[i, j])
+        ASSERT(m[i, j] == -1 || m[i, j] > 0)
+    END
+    NEWLINE
+END
+
+REPI(i, n)
+    REPI(j, n, SPACE)
+        INT(-1, 1000000000, p[i, j])
+        ASSERT(p[i, j] == -1 || p[i, j] > 0)
+        ASSERT(
+              ((p[i, j] == -1) && (m[i, j] == -1)) ||
+              ((p[i, j] != -1) && (m[i, j] != -1))
+              )
+    END
+    NEWLINE
+END
+
+EOF

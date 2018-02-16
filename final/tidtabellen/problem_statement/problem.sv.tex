@@ -1,0 +1,43 @@
+\problemname{Vilse i tidtabellen}
+Rakso är på semester i Duln för att titta på dyk-makron. Hon står vid en busshållplats och ska åka till sitt hotell "de nio". Det brukar alltid regna i Duln men idag är det isande kallt.
+
+I glädjen att vara på semester, långt borta från sitt hem i den bedrövliga staden Stomholck, har Rakso totalt tappat tidsuppfattningen -- hon vet inte vad klockan är. När hon tar upp sin jättesmarta fickdator för att ta reda på saken dör den -- det är för kallt ute för att den ska fungera!
+
+Men Rakso ger inte upp. Hon bestämmer sig för att ta reda på vad klockan är ändå. Till sin hjälp har hon:
+\begin{enumerate}
+  \item En tidtabell på väggen. Den visar vid vilka tider en buss anländer till hållplatsen hon står vid.
+    Samma tidtabell gäller för alla dagar, och enbart en busslinje passerar stationen.
+  \item En display som visar hur snart de kommande $N$ bussarna anländer till hållplatsen.
+\end{enumerate}
+Bussar kommer alltid exakt när de lovar (detta är ju inte Stomholck), och anländer bara vid hela sekunder. Just nu när Rakso observerar tidtabellerna och displayen är det också vid en hel sekund. Om en buss anländer precis just nu kommer den synas på displayen med värde $0$.
+
+Kan du hjälpa Rakso att skriva ett program som svarar på vad klockan är? Om det finns flera möjliga svar, så skriv ut alla.
+Om det inte finns någon giltig lösning (d.v.s. displayen måste visa fel), skriv ut \texttt{"fel"}.
+
+(Baserat på en verklig händelse. Rakso heter egentligen något annat.)
+
+\section*{Indata}
+Den första raden innehåller två heltal $N$ och $M$ ($1 \leq N \leq 10^6$ , $1 \leq M \leq 3\,000$).
+Den andra raden innehåller $N$ tal: tiderna $t_i$ till nästkommande bussar som visas på displayen, i sekunder ($0 \le t_i \le 10^9$).
+Dessa garanteras komma i stigande ordning, och inga tider är samma.
+
+De följande $M$ raderna innehåller tiderna i tidtabellen i stigande ordning, på formatet \texttt{hh:mm:ss} (mellan \texttt{00:00:00} och \texttt{23:59:59}).
+Tidtabellen kommer inte att innehålla några upprepade tider.
+
+\section*{Utdata}
+Skriv ut en enda rad: möjligheterna för vad klockan kan vara, separerade med mellanslag.
+Tiderna ska vara sorterade i ökande ordning, och formateras på samma sätt som i indata.
+
+Om det inte finns någon möjlighet alls för vad klockan kan vara, skriv ut \texttt{"fel"} (utan citattecken).
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.\\
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 28         &  $N = 3$, $3 \le M \le 10$, ingen hänsyn behöver tas till att tolvslaget kan passeras \\ \hline
+2     & 35         &  $3 \le N \le M \le 1000$ \\ \hline
+3     & 37         & Inga ytterligare begränsningar \\ \hline
+\end{tabular}

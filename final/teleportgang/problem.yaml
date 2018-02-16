@@ -1,0 +1,9 @@
+name: teleportgang
+author: Erik Odenman
+source: Programmeringsolympiadens finaltävling 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+type: scoring
+grading:
+    objective: max
+validator_flags: float_tolerance 1e-2

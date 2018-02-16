@@ -1,0 +1,68 @@
+\problemname{Rulltrappa}
+Paulina Osqulda\footnote{Osqulda är en studentikos benämning på teknologer som studerar vid Kungliga Tekniska högskolan i Stockholm, se \url{https://sv.wikipedia.org/wiki/Osquar_och_Osqulda}.} pluggar på KTH i Stockholm, och åker varje morgon till skolan via tunnelbanan.
+När hon kommer fram till sin tunnelbanestation måste hon åka upp längs en rulltrappa för att komma ut.
+
+I rulltrappan bildas det ofta två olika köer.
+På den högra sidan av trappan ställer sig folk som vill stå still i rulltrappan, medan man ställer sig på den vänstra sidan om man föredrar att gå i rulltrappan (för att komma upp snabbare).
+
+Paulina har märkt att det oftast bildas en \emph{jättelång} kö till den vänstra sidan av rulltrappan, eftersom alla är så stressade till jobbet och vill kunna gå snabbt upp för rulltrappan.
+På sista tiden har hon funderat på om det kanske rentav skulle gå snabbare att istället välja den högra kön, eftersom kön där ofta är kortare.
+
+Rulltrappan är totalt $M$ trappsteg lång.
+Om man står i rulltrappan färdas man $S$ trappsteg per sekund uppåt i rulltrappan.
+Om man istället går i rulltrappan färdas man $G$ trappsteg per sekund uppåt.
+
+Totalt kan $A$ personer per sekund börja gå i rulltrappan ur den vänstra kön, medan $B$ personer per sekund kan ställa sig på rulltrappan ur den högra kön.
+Detta betyder att i början av förloppet går en person på rulltrappan.
+Innan en ny person går på rulltrappan måste denna vänta $\frac{1}{A}$ (resp $\frac{1}{B}$ sekunder) för att kunna gå på rulltrappan.
+
+Den vänstra kön är för närvarande $L$ personer lång, och den högra är $R$ personer lång.
+
+Hjälp Paulina avgöra vilken kö hon ska ställa sig i, för att så snabbt som möjligt nå rulltrappans topp.
+
+\section*{Indata}
+Den första raden i indatat består av heltalen $M, S, G$ som är beskrivna i uppgiften.
+Det gäller att $30 \le M \le 200$, $1 \le S \le G \le M$.
+
+Nästa rad innehåller decimaltalen $A, B$ som är beskrivna i uppgiften.
+Det gäller att $0.1 \le A, B \le 1$.
+
+Den sista raden innehåller heltalen $L, R$ som är beskrivna i uppgiften.
+Det gäller att $0 \le L, R \le 100$.
+
+\section*{Utdata}
+Skriv ut \texttt{latmask} om det snabbaste alternativet är att välja den högra kön och stå i rulltrappan, eller \texttt{friskus} om det snabbaste alternativet är att välja den vänstra kön och gå i rulltrappan.
+
+Det är garanterat att tiden det tar för Paulina att åka upp för rulltrappan skiljer sig med minst 1 sekund mellan de två köerna, så du behöver aldrig bry dig om fallet när båda alternativen är lika snabba.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{|l|l|l|l|}
+\hline
+Grupp & Poängvärde & Begränsningar \\ \hline
+1     & 40         &  $L = R = 0$ \\ \hline
+2     & 40         &  $S = G$ \\ \hline
+3     & 20         & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+% För att få poäng kommer ditt program behöva klara av testfall både där svaret är \texttt{friskus} och där svaret är \texttt{latmask}.
+
+\section*{Förklaring av exempel 1}
+I exempel 1 är båda köer tomma, så Paulina kan omedelbart börja gå upp längs rulltrappan.
+Om hon står stilla i rulltrappan färdas hon med 1 trappsteg per sekund, så det tar $\frac{50}{1} = 50$ sekunder.
+Om hon istället går upp i rulltrappan färdas hon med 2 trappsteg per sekund, så det tar $\frac{50}{2} = 25$ sekunder, vilket är det snabbare alternativet.
+
+\section*{Förklaring av exempel 2}
+I exempel 2 går det inte snabbare för Paulina att gå upp för rulltrappan än om hon står stilla (ty hon har stukat foten).
+Däremot har båda sidorna en kö.
+
+I den högra sidan av kön står det 3 personer, och det tar $\frac{3}{0.5} = 6$ sekunder innan dessa personer har gått på rulltrappan.
+I den vänstra sidan står det istället 4 personer, och det tar $\frac{7}{1} = 7$ sekunder innan dessa personer har gått på rulltrappan.
+
+Således är det snabbare alternativet att välja den högra kön och stå stilla i rulltrappan.
+
+\section*{Förklaring av exempel 3}
+Om Paulina väljer den vänstra kön och går upp för rulltrappan kommer hon upp efter 129 sekunder. 
+Om hon istället väljer att ta den högra kön och därmed stå i rulltrappan tar det 130 sekunder.

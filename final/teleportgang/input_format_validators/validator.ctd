@@ -1,0 +1,11 @@
+INT(2, 100000, n) SPACE INT(0, 200000, m) NEWLINE
+INT(1, n, s) SPACE INT(1, n, t) NEWLINE
+ASSERT(s != t)
+REPI(i, m)
+	INT(1, n, u[i]) SPACE INT(1, n, v[i]) NEWLINE
+	ASSERT(u[i] != v[i])
+END
+IF(m != 0)
+	ASSERT(UNIQUE(u, v))
+END
+EOF
