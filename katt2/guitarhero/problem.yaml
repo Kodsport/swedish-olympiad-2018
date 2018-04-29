@@ -1,0 +1,8 @@
+name: guitarhero
+author: Fredrik Hernqvist
+source: Programmeringsolympiadens lägertävling 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+grading:
+    objective: max
+type: scoring

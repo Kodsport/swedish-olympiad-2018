@@ -1,0 +1,11 @@
+name: kryssring
+author: Simon Lindholm, Måns Magnusson, Nils Gustafsson
+source: Programmeringsolympiadens lägertävling 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+grading:
+    objective: max
+limits:
+    time_multiplier: 20
+type: scoring
+validation: custom score

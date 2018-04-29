@@ -1,0 +1,36 @@
+\problemname{Företagsrykte}
+Du har just startat ett företag.
+Du vet att det företaget sysslar med inte är jättepopulärt --
+varje dag $i$ under de kommande $n$ dagarna räknar du med att ditt rykte kommer försämras med något givet värde $r_i$.
+Du kommer därefter även förlora lika mycket pengar som ditt rykte är dåligt.
+Under natten har du möjlighet att nollställa ditt rykte, genom att byta namn på företaget.
+Detta går att göra hur många gånger som helst, men kostar en fix summa $k$.
+
+Vilken är den minsta förlust du kan uppnå?
+
+\section*{Indata}
+Den första raden innehåller två heltal $n$, och $k$ ($2 \leq n \leq 4 \cdot 10^5$, $0 \leq k \leq 2 \cdot 10^9$).
+Den andra raden innehåller $n$ tal $r_i$ ($1 \le r_i \le 10^6$) -- hur mycket ditt rykte ditt rykte kommer försämras under dag $i$.
+
+\section*{Utdata}
+Ett tal, den minsta förlusten du kan uppnå.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 12         & $2 \le n \le 20$ \\ \hline
+2     & 17         & $2 \le n \le 1000$ \\ \hline
+3     & 25         & $k \le 1000$, $r_i \le 1000$ \\ \hline
+4     & 23         & Alla $r_i$ är samma \\ \hline
+5     & 23         & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+\section*{Förklaring av Sample 1}
+Här är det optimalt att byta namn tre gånger: under första, andra och tredje natten.
+
+\section*{Förklaring av Sample 2}
+Här är det optimalt att byta namn en gång, under natten mellan dag 15 och dag 16.
