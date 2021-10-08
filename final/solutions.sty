@@ -1,0 +1,56 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{solutions}
+
+\RequirePackage{subfiles}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{listings}
+\RequirePackage[swedish]{babel}
+\RequirePackage{parskip}
+\RequirePackage{amsmath}
+\RequirePackage{graphicx}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage[noend]{algpseudocode}
+\RequirePackage{algorithm}
+\RequirePackage{amssymb}
+\RequirePackage{commath}
+\RequirePackage{amsthm}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumerate}
+\RequirePackage{siunitx}
+\RequirePackage{multicol}
+\RequirePackage[colorlinks,urlcolor=blue,linkcolor=blue]{hyperref}
+\RequirePackage{adjustbox}
+\RequirePackage{courier}
+\RequirePackage{mathtools}
+
+% Anonymize (creds to http://tex.stackexchange.com/a/225790)
+\pdfinfo{ /ModDate ()  /CreationDate () }
+\hypersetup{pdfinfo={ Creator={}, Producer={}, Title={}, Author={}, Subject={}, Keywords={} }}
+\pdftrailerid{} %Remove ID
+\pdfsuppressptexinfo15 %Suppress PTEX.Fullbanner and info of imported PDFs
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+% \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+% \lstset{framextopmargin=50pt,frame=bottomline}
+
+% \addtolength{\textwidth}{2cm}
+% \addtolength{\hoffset}{-1cm}
+
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\chead{}
+\cfoot{}
+\fancyfoot[RO, LE]{\thepage}
+
+\lstset{
+    frame=L,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={å}{{\aa}}1 {ä}{{\"a}}1 {ö}{{\"o}}1
+}
+\renewcommand{\thesection}{\Alph{section}}
+\date{}

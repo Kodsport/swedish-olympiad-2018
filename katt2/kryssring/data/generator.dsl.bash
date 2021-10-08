@@ -11,11 +11,12 @@ mkdir -p sample/
 python3 gen.py case=0 n=10 m=10 lo=0.5 hi=0.5 keep=0.1 bias=0 >sample/1.in
 
 function ca {
-	group grupp$1 10
+	GNAME=grupp$(printf "%02d" $1)
+	group $GNAME 10
 	tc $1 gen case=$1 "${@:2}"
 	echo "on_reject: break
 range: 0 10
-grader_flags: no_errors" >secret/grupp$1/testdata.yaml
+grader_flags: no_errors" >secret/$GNAME/testdata.yaml
 }
 
 ca 1 n=10 m=10 lo=0.4 hi=0.6 bias=0.9 keep=0.15

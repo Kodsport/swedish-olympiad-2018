@@ -1,0 +1,235 @@
+\documentclass[a4paper,12pt,oneside]{amsbook}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+%\usepackage{euler}
+%\usepackage{garamond}
+
+\usepackage{newcent}
+%\fontfamily{fxm}\selectfont
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% Detta paket skoter grafiken
+\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[swedish]{babel}
+% For bortkommentering
+\usepackage{verbatim}
+% For att slippa indentering av Sections och SubSections
+\usepackage{indentfirst}
+
+% Har stalls paragrafindentering och avstand mellan stycken och rader mm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\baselineskip}{12pt}
+% Har definieras sidan
+\setlength{\voffset}{-15mm}
+\setlength{\hoffset}{-5.5mm}
+
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{10mm}
+\setlength{\headsep}{8mm}
+\setlength{\footskip}{16mm}
+
+\setlength{\evensidemargin}{0mm}
+\setlength{\oddsidemargin}{0mm}
+
+\setlength{\marginparsep}{0mm}
+\setlength{\marginparwidth}{0mm}
+
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{225mm}
+\setlength{\paperwidth}{210mm}
+\setlength{\paperheight}{297mm}
+\setlength{\headwidth}{170mm}
+% Huvud och Fot
+%\fancypagestyle{}{
+\fancyhf{}\fancyhead[c]{\small{\textit{Svar och rättningsanvisningar
+      till Programmeringsolympiadens skolkval 2018}}}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newenvironment{lista}
+{\begin{itemize}
+\setlength{\parindent}{0pt}
+\setlength{\itemsep}{6pt}}
+{\end{itemize}}
+% Uppgifter
+\newcounter{probnr}
+\newenvironment{tal}{%
+\begin{list}
+%{\textbf{\arabic{section}.\arabic{probnr}}} {\usecounter{probnr}
+{\textbf{\arabic{probnr}}} {\usecounter{probnr}
+\setlength{\leftmargin}{0mm}
+\setlength{\rightmargin}{0mm}
+\setlength{\labelwidth}{-1mm}
+\setlength{\labelsep}{1mm}}
+\setlength{\itemsep}{6pt}
+}{\end{list}}
+% Definition av avsnitt: FAKTA, EXEMPEL, PASTAENDE
+\newtheorem{fakta}{Fakta}
+\newtheorem{exempel}{Exempel}
+\newtheorem{problem}{Problem}
+%
+\newtheoremstyle{test}% NAME
+{20pt}      % ABOVESPACE
+{10pt}      % BELOWSPACE
+{\sffamily} % BODYFONT
+{0pt}       % INDENT
+{\scshape}  % HEADFONT
+{}          % HEADPUNCT
+{\newline}  % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{test}
+\newtheorem{program}{Program}
+\newcommand{\sv}[1]{\textsc{#1}}            % Sma versaler
+\newcommand{\fe}[1]{\textbf{#1}}            % FET
+\newcommand{\ku}[1]{\textit{#1}}            % KURSIV
+\newcommand{\cu}[1]{\texttt{#1}}            % Courier
+\newcommand{\sk}[1]{\texttt{#1}}            % Courier
+\newcommand{\rubrik}[1]{\begin{center}\sf\huge{#1}\normalsize\rm\end{center}}
+\begin{document}
+%\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png,.eps}
+
+
+\specialsection*{Svar och rättningsanvisningar}
+\thispagestyle{fancy}
+\lhead{}
+\begin{itemize}
+%\setlength\itemsep{0.2cm}
+\item Läs igenom \textit{tävlingsreglerna}.
+\item Programmen tas i tur och ordning in i editorn och kompileras.
+Uppstår kompileringsfel betraktas programmet som felaktigt och lösningen
+ges $0$ poäng.
+\item Programmet körs med givna indata enligt nedan. Alternativt, om eleven förberett programmet för det, kan de bifogade indatafilerna användas istället.
+\item Varje testfall
+  med korrekt svar ger 1 poäng.
+\item
+Totalt kan man
+  alltså få 5 poäng för varje uppgift.
+\item Om exekveringstiden för ett testexempel, kört på en vanlig dator,
+\textit{överskrider 3 sekunder} betraktas körningen av testexemplet som felaktigt.
+\item Det kan vara viktigt att programmet körs i en miljö liknande den som
+programmet utvecklats i, samma version av kompilator eller
+interpretator.
+\item Vid problem i samband med rättningen är det viktigt att det sunda
+förnuftet får råda!
+\item Ett förslag till rättningsprocedur kan vara att låta eleven
+sitta vid datorn.
+\end{itemize}
+
+\newpage
+
+
+\subsection*{Uppgift 1 -- Tunnelbanan}
+~\\
+~\\
+{\tt 
+\begin{tabular}{||l||c|c|c|c||c||}\hline\hline
+& \multicolumn{4}{c||}{\fe{Indata}} & \fe{Utdata} \\ 
+& $a_1$ & $a_2$ &$a_3$ & $a_4$& \\ \hline \hline
+\fe{Test 1} & 0  &5  &10 &20 &33\\ \hline
+\fe{Test 2} & 21 &0  &10 &5  &18\\ \hline
+\fe{Test 3} & 8  &7  &0  &6  &12\\ \hline
+\fe{Test 4} & 69 &81 &15 &2  &71\\ \hline
+\fe{Test 5} & 13 &20 &15 &0  &25\\ \hline\hline
+\end{tabular}
+}
+%$$
+
+\subsection*{Uppgift 2 -- Köpa matta}
+~\\
+~\\
+{\tt 
+\begin{tabular}{||l||c|c||c|c||}\hline\hline
+& \multicolumn{2}{c||}{\fe{Indata}} & \multicolumn{2}{c||}{\fe{Utdata}} \\ 
+& $M$ & $N$ & $B$ & $L$ \\ \hline \hline
+\fe{Test 1}&700 &750 &27 &27\\ \hline                           
+\fe{Test 2}&901 &959 &30 &31\\ \hline                            
+\fe{Test 3}&123456789012 &123456789012 &12 &10288065751\\ \hline 
+\fe{Test 4}&987654021 &987654321 &31382 &31472\\ \hline          
+\fe{Test 5}&987987123123 &987987987987 &993975 &993976\\ \hline 
+\hline
+\end{tabular}
+}
+
+\subsection*{Uppgift 3 -- Flyttkartonger}
+~\\
+~\\
+{\tt 
+\begin{tabular}{||l||c|l||c||}\hline\hline
+& \multicolumn{2}{c||}{\fe{Indata}} & \fe{Utdata} \\ 
+& $N$ & $a_1, a_2, ..., a_N$ &  \\ \hline \hline
+\fe{Test 1}&3 & 13 6 20 & 21 \\ \hline                                                                                              
+\fe{Test 2}&5 & 77 38 90 19 78 & 253 \\ \hline                                                                                      
+\fe{Test 3}&10 & 535 50 273 640 906 152 8 816 292 943 & 138181  \\ \hline                                                           
+\fe{Test 4}&20 & 1542 582 2038 140 206 1513 1976 1220 984 1556 &  \\
+           &&1159 1461 2626 1437 883 2169 1172 2980 799 103 & 100071064  \\ \hline
+\fe{Test 5}&20 & 1264 1097 1057 1914 690 2889 1796 384 1936 747 & \\
+           && 2948 939 1673 1473 1775 662 1997 1945 1 3000 & 555493117 \\ \hline  
+\hline
+\end{tabular}
+}
+
+\subsection*{Uppgift 4 -- Brickor}
+~\\
+~\\
+{\tt 
+\begin{tabular}{||l||l||c||}\hline\hline
+& \fe{Indata} & \fe{Utdata} \\ \hline\hline
+\fe{Test 1}&VSVVVS & 2\\ \hline         
+\fe{Test 2}&VSSVSSVSSV & 3\\ \hline     
+\fe{Test 3}&VSVSVVSVVS & 5\\ \hline     
+\fe{Test 4}&VVVSVSVSVSVSVSV & 9\\ \hline
+\fe{Test 5}&SSVSVVVSSSVSVSV & 8\\ \hline
+\hline
+\end{tabular}
+}
+
+\subsection*{Uppgift 5 -- DuTub}
+~\\
+~\\
+{\tt 
+\begin{tabular}{||l||c|c||c|c||c|c||c|c||c|c||}\hline\hline
+& \multicolumn{2}{c||}{\fe{Test 1}} & \multicolumn{2}{c||}{\fe{Test 2}}& \multicolumn{2}{c||}{\fe{Test 3}} & \multicolumn{2}{c||}{\fe{Test 4}} & \multicolumn{2}{c||}{\fe{Test 5}} \\\hline\hline
+Antal videor& \multicolumn{2}{c||}{ 8 }& \multicolumn{2}{c||}{ 9} & \multicolumn{2}{c||}{ 10} & \multicolumn{2}{c||}{ 30}& \multicolumn{2}{c||}{ 30}\\ \hline
+& \fe{län} & \fe{kat} & \fe{län} & \fe{kat} & \fe{län} & \fe{kat} & \fe{län} & \fe{kat} & \fe{län} & \fe{kat} \\ \hline
+Video 1 & 20 &c&36 &abh&25 &fij&12& bc&12& b       \\\hline
+Video 2 & 5& a&15& f&25& bg&18& i&14& gh           \\\hline
+Video 3 & 13& b&4& e&23& fg&13& a&14& ad           \\\hline
+Video 4 & 11& b&9 &c&26& bde&9& f&10& i            \\\hline
+Video 5 & 10& a&13& c&37& acfij&17& ef&12& h       \\\hline
+Video 6 & 10& c&21& dfh&13& ac&16& h&20& cd        \\\hline
+Video 7 & 7& i&26& ab&28& afgj&29 &agj&12& gj      \\\hline
+Video 8 & 12& b&13& b&29& fij&23& adh&12& df       \\\hline
+Video 9 & &&3& e&17& aij&41& agij&17& ae           \\\hline
+Video 10 &&&&&32& bdf&31 &eij&20& cgj               \\\hline
+Video 11 &&&&&&&17 &cf&19& cgi                      \\\hline
+Video 12 &&&&&&&15 &ad&22& bfi                      \\\hline
+Video 13 &&&&&&&18 &fg&16& gi                       \\\hline
+Video 14 &&&&&&&28 &chi&21& cj                      \\\hline
+Video 15 &&&&&&&13 &g&12& j                         \\\hline
+Video 16 &&&&&&&7  &b&23& bgh                       \\\hline
+Video 17 &&&&&&&10 &e&32& cij                       \\\hline
+Video 18 &&&&&&&30 &abh&10& e                       \\\hline
+Video 19 &&&&&&&26 &ej&16& dg                       \\\hline
+Video 20 &&&&&&&10 &c&21& bgi                       \\\hline
+Video 21 &&&&&&&20 &dgh&21& dfg                     \\\hline
+Video 22 &&&&&&&22 &fh&13& afg                      \\\hline
+Video 23 &&&&&&&7  &dg&24& dh                       \\\hline
+Video 24 &&&&&&&19 &af&24& bei                      \\\hline
+Video 25 &&&&&&&18 &fj&14& fi                       \\\hline
+Video 26 &&&&&&&2  &d&24& aj                        \\\hline
+Video 27 &&&&&&&17 &j&34& afij                      \\\hline
+Video 28 &&&&&&&24 &ab&15& di                       \\\hline
+Video 29 &&&&&&&21 &efg&25& hi                      \\\hline
+Video 30 &&&&&&&17 &gi&21& cfi                      \\\hline\hline
+\fe{Utdata:} & \multicolumn{2}{c||}{ 33 }& \multicolumn{2}{c||}{ 59} & \multicolumn{2}{c||}{ 79} & \multicolumn{2}{c||}{ 80}& \multicolumn{2}{c||}{ 78} \\ \hline\hline
+\end{tabular}
+}
+
+
+\end{document}

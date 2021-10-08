@@ -1,0 +1,11 @@
+name: stulenstrang
+author: Måns Magnusson
+source: Programmeringsolympiadens KATT-tävling 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+grading:
+    objective: max
+    show_test_data_groups: yes
+limits:
+    time_multiplier: 13
+type: scoring

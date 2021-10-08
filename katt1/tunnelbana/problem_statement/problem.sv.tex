@@ -1,0 +1,38 @@
+\problemname{Tunnelbana}
+I Stomholck är tunnelbanenätet format som ett träd, och till skillnad från bussarna kommer tunnelbanan oftast i tid.
+Du planerar att genomföra $m$ st resor i tunnelbanenätet, och vill göra det så billigt som möjligt.
+ 
+Kostnaden för att resa mellan två stationer är 1 krona per kant på vägen mellan stationerna. 
+Det går dessutom att köpa ett kort som tillåter obegränsat antal resor på alla kanter mellan två valfria stationer utan extra kostnad.
+Kortets kostnad är k kronor per kant på den valda vägen och en kund får inte köpa mer än ett kort.
+Man behöver inte köpa ett kort om man inte vill. Eftersom nätet är ett träd finns det alltid exakt en väg mellan varje par av noder.
+
+Given ett nätverk med $n$ stationer och $m$ resor, avgör den minsta kostnaden att utföra resorna.
+
+\section*{Indata}
+Den första raden innehåller tre heltal $n$, $m$ och $k$ ($2 \leq n \leq 10^5$ , $0 \leq m \leq 10^5$ , $0 \leq k \leq 10^5$).
+De följande $n-1$ raderna innehåller två heltal $u_i$ och $v_i$ ($1 \leq u_i , v_i \leq n$ , $u_i \neq v_i$), vilket betyder
+att en kant går mellan noderna $u_i$ och $v_i$.
+De följande $m$ raderna innehåller två heltal $a_i$ och $b_i$ ($1 \leq a_i , b_i \leq n$ , $a_i \neq b_i$), vilket betyder 
+att resa nummer $i$ går mellan $a_i$ och $b_i$.
+\section*{Utdata}
+Ett tal, den minsta kostnaden för en person att resa alla $m$ resor.
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 19         &  $2 \le n \le 50$ , $0 \le m \le 50$ \\ \hline
+2     & 26         &  $2 \le n \le 1000$ , $0 \le m \le 1000$ \\ \hline
+3     & 20         &  $2 \le n \le 20000$ , $0 \le m \le 1000$ \\ \hline
+4     & 35         & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+\section*{Förklaring av Sample 1}
+Om man inte köper något kort blir kostnaden för de två resorna $7$. Om man däremot köper
+ett kort mellan $2$ och $5$ tjänar man två kronor, så kostnaden blir $5$.
+
+\section*{Förklaring av Sample 2}
+Här är det inte värt att köpa något kort alls.

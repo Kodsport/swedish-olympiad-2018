@@ -1,0 +1,7 @@
+INT(1, 200, n) SPACE INT(1, 10000, m) NEWLINE
+REPI(i, m)
+	INT(0, n-1, u[i]) SPACE INT(0, n-1, v[i]) SPACE INT(1, 255) SPACE INT(1, 255) NEWLINE
+	ASSERT(u[i] != v[i])
+END
+ASSERT(UNIQUE(u, v))
+EOF

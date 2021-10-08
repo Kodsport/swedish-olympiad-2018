@@ -1,0 +1,443 @@
+\input{Olympiad}
+\thispagestyle{fancy}
+% ----------------------------------------------------
+
+\begin{center}
+\Huge{Programmeringsolympiaden 2018}
+\end{center}
+\vspace{-1cm} 
+\specialsection*{Tävlingsregler för skolkvalet}
+\begin{lista}
+\item Tävlingen äger rum på av skolan bestämt datum under {\bf fyra
+    timmar. Ingen förlängning ges för lunch eller raster.} Eleven ska i förväg komma överens med läraren om att använda egen dator eller en som skolan tillhandahåller. I vilket fall som helst måste eleven befinna sig i avtalad lokal på skolan.
+\item Tävlingen består av fem uppgifter som vardera ska lösas genom ett
+  datorprogram i valfritt programmeringsspråk.
+\item {\bf Indata kan läsas in i programmet på valfritt sätt}, t.ex. genom att programmet för en dialog med användaren (som i körningsexemplena i uppgifterna), att de skrivs in i ett grafiskt gränssnitt eller att datafiler skickas till {\em standard input}. Kom bara överens med din lärare om hur programmet ska testas.
+\item Dina lösningar kommer att testköras med förpreparerade
+  indata. Varje uppgift testas normalt med 5 testfall, som vardera ger
+  1 poäng om ditt program skriver ut korrekt svar inom en exekveringstidsgräns av
+  {\bf 3 sekunder}.
+\item Det är ofta olika begränsningar på de olika testfallen, t.ex.\ storleken på
+indata eller andra inskränkningar. Detta anges i uppgiften. {\bf Observera att det kan vara
+helt olika svårighetsgrad på en uppgift beroende på dessa skillnader. Det kan därför vara
+lättare att få delpoäng på en uppgift som verkar svår än att få full
+poäng på en uppgift som verkar lättare.} Informationen om delpoäng är
+därför extremt viktig för att planera sin
+tävling.
+\item Ingen test av indata behöver göras, den följer specifikationerna 
+i uppgiften.
+\item Rättningen utförs på samma eller likvärdig dator. Ändringar
+  i källkoden tillåts ej efter tävlingen. Om programmet
+  inte kan kompileras ges 0 p.\ på uppgiften. 
+\item Om något av följande inträffar ger
+  det {\em testfallet} 0 poäng, men programmet fortsätter testas med övriga testfall.
+\begin{lista}
+\item Exekveringstiden överstiger 3 sekunder \vspace{-0.2cm}
+\item Exekveringsfel (run time error) \vspace{-0.2cm}
+\item Fel svar \vspace{-0.2cm}
+\end{lista}
+
+\item Deltagandet är individuellt vilket bland annat innebär att inget utbyte av idéer eller 
+filer får ske under tävlingen.  
+\item Hjälpmedel: Valfritt skriftligt material, material som finns installerat på datorn samt material som finns tillgängligt på internet. Det är \ku{inte} tillåtet att aktivt kommunicera på internet (t.ex. chatta eller ställa frågor till ett forum) utan endast att söka efter information. Räknedosa är tillåten.
+\item Tävlingsbidraget ska lämnas in i form av källkodsfiler som läggs på utdelat 
+minne eller i en av läraren angiven hårddiskkatalog. Filerna ska döpas till 
+uppg1...uppg5 med passande filtillägg. Ingen hänsyn tas till andra filer. Var noga 
+med att lämna in den korrekta versionen av ditt program.  
+\end{lista}
+
+%De högst placerade i kvalet går vidare till finalen där landslagsplatser till BOI i Sverige och IOI i Japan står på spel.
+\begin{center}
+\Large Lycka till!
+\end{center}
+%\end{document}
+
+\newpage
+
+
+
+\specialsection*{Uppgift 1 -- Tunnelbanan}
+
+Baltic Olympiad in Informatics -- programmeringstävlingen för länderna i
+östersjöregionen -- kommer till våren att anordnas i Stockholm, och
+deltagarna kommer åka tunnelbana mellan vandrarhemmet och tävlingsarenan.
+
+På tunnelbanetågen finns det sätesgrupper med fyra säten vardera. Nu
+kommer ett antal grupper av deltagare och vill sätta sig. Varje grupp
+har storlek 1, 2, 3 eller 4. Helst skulle alla personerna i en grupp
+vilja sitta i samma fyrsätesgrupp, alltså slippa dela på sig. Hur många fyrsätesgrupper krävs för att detta ska vara möjligt?
+
+Skriv ett program som läser in fyra heltal  $a_1, a_2, a_3, a_4$ --
+antalet grupper av varje storlek (alla tal är mellan $0$ och $100$) --
+och skriver ut det minsta antalet fyrsätesgrupper som behövs.
+\vspace{0.2cm}
+
+\begin{multicols}{2}
+\fe{Körningsexempel 1}
+
+\begin{verbatim}
+Antal 1-grupper ? 1
+Antal 2-grupper ? 1
+Antal 3-grupper ? 1
+Antal 4-grupper ? 1
+
+Behövs: 3
+\end{verbatim}
+
+\vspace{0.2cm}
+
+\fe{Körningsexempel 2} 
+
+\begin{verbatim}
+Antal 1-grupper ? 1
+Antal 2-grupper ? 2
+Antal 3-grupper ? 1
+Antal 4-grupper ? 0
+
+Behövs: 2
+\end{verbatim}
+
+\vspace{0.2cm}
+
+\fe{Körningsexempel 3}
+
+\begin{verbatim}
+Antal 1-grupper ? 0
+Antal 2-grupper ? 1
+Antal 3-grupper ? 2
+Antal 4-grupper ? 0
+
+Behövs: 3
+\end{verbatim}
+\vfill\columnbreak
+
+\vspace*{0.1cm}
+\includegraphics[width=7cm]{tunnelbana1.eps}\\
+En optimal placering i exempel 1 (streckade linjer avgränsar grupper av personer)
+\vspace{1.5cm}
+
+\includegraphics[width=7cm]{tunnelbana2.eps}\\
+En optimal placering i exempel 2.
+\vspace{2cm}
+
+\includegraphics[width=7cm]{tunnelbana3.eps}\\
+En optimal placering i exempel 3.
+\end{multicols}
+
+\vspace{0.2cm}
+
+
+%\section*{Poängsättning}
+\fe{Poängsättning}
+
+För testfall värda $1$ poäng finns inga grupper av storlek 1.\\
+För testfall värda $1$ poäng finns inga grupper av storlek 2.\\
+För testfall värda $1$ poäng finns inga grupper av storlek 3.\\
+För testfall värda $2$ poäng gäller inga speciella begränsningar.\\
+
+
+\newpage
+\begin{center}
+\includegraphics[width=4cm]{matta.eps}
+\end{center}
+\vspace{-1.1cm}
+\specialsection*{Uppgift 2 -- Köpa matta}
+Under IOI i Teheran i somras märktes en ökad efterfrågan på persiska
+mattor, i synnerhet sådana vars mönster utgörs av ett rutmönster med $L
+\times B$ rutor (se bild ovan), eftersom dessa är mycket lämpliga för att i
+hemlighet prova ut algoritmer på.
+
+En mattas pris brukar avgöras av antalet rutor, så en typisk kund vill
+ha en matta med minst $M$ rutor och högst $N$ rutor. Om det finns flera
+möjliga mattor vill kunden ha en så kvadratisk matta som möjligt,
+d.v.s. den vill att $|L - B|$ är så litet som möjligt.
+
+Skriv ett program som läser in talen $M$ och $N$ och skriver ut det
+bästa valet av $B$ och $L$ (den minsta sidlängden först). Det kommer
+alltid finnas ett unikt bästaval.
+
+\vspace{0.1cm}
+\fe{Körningsexempel 1}
+
+\begin{verbatim}
+Minimalt antal rutor ? 13
+Maximalt antal rutor ? 13
+
+Bästa mått: 1 13
+\end{verbatim}
+\vspace{0.1cm}
+
+\fe{Körningsexempel 2}
+
+\begin{verbatim}
+Minimalt antal rutor ? 60
+Maximalt antal rutor ? 70
+
+Bästa mått: 8 8
+\end{verbatim}
+\vspace{0.1cm}
+
+\fe{Körningsexempel 3}
+
+\begin{verbatim}
+Minimalt antal rutor ? 750
+Maximalt antal rutor ? 755
+
+Bästa mått: 26 29
+\end{verbatim}
+
+%\section*{Poängsättning}
+%För testfall värda $40$ poäng gäller att $1 \le M \le N \le 1\,000$ \\
+%För testfall värda $20$ poäng gäller att $M = N$, och $10^9 \le M \le 10^{12}$ \\
+%För testfall värda $40$ poäng gäller att $10^9 \le M \le N \le 10^{12}$ \\
+\fe{Poängsättning}
+
+För testfall värda $2$ poäng gäller att $1 \le M \le N \le 1\,000$ \\
+För testfall värda $1$ poäng gäller att $M = N$, och $10^{11} \le M \le 10^{12}$ \\
+För testfall värda $2$ poäng gäller att $10^8 \le M \le N \le 10^{12}$ \\
+
+\newpage
+\specialsection*{Uppgift 3 -- Flyttkartonger}
+
+Du har just hjälpt en kompis att flytta, men tyvärr har du fastnat i
+fel ände av en smal korridor full med flyttkartonger. Korridoren
+består av $N$ staplar av flyttkartonger, där stapel nummer $i$
+innehåller $a_i$ kartonger. Alla kartonger är lika stora.
+
+Det enda sättet att ta sig ut är att gå ovanpå staplarna från stapel
+$1$ till stapel $N$. Om man befinner sig på en stapel kan man gå till
+en närliggande stapel, men bara om den inte är högre än den man står
+på. Om stapeln man står är minst två kartonger högre än en närliggande
+stapel kan man dessutom knuffa ner den översta kartongen från stapeln
+man står på till den närliggande stapeln. Detta kan upprepas hur många
+gånger som helst. 
+
+Du befinner dig just nu på stapel $1$. Tyvärr kanske det är omöjligt
+för dig att komma till stapel $N$. Men som tur är får du lägga till
+valfritt antal {\em extra} kartonger till stapel $1$ innan du börjar gå. Skriv ett program som
+beräknar hur många extra kartonger du behöver lägga till för att kunna
+ta dig till stapel $N$.
+
+Programmet ska läsa in antalet staplar $N$, och sedan höjden $a_i$ på
+varje stapel. Programmet ska skriva ut det minsta antalet extra kartonger som
+behöver läggas till.
+\begin{multicols}{2}
+
+\fe{Körningsexempel 1}
+
+\begin{verbatim}
+Antal staplar ? 4
+Stapel 1 ? 1
+Stapel 2 ? 2
+Stapel 3 ? 3
+Stapel 4 ? 2
+ 
+Extra kartonger: 3
+\end{verbatim}
+
+\includegraphics[width=7cm]{kartongbild2.eps}\\
+\begin{minipage}{7cm}
+\ku{\small Bilden visar exempel 1. De mörkgrå kartongerna är extrakartonger. Strategin är att knuffa ner den översta extrakartongen till stapel 2. Därefter kan man gå raka vägen till stapel 4. Det inte hade fungerat med färre än 3 extrakartonger.}
+\end{minipage}
+\vfill\columnbreak
+
+\fe{Körningsexempel 2}
+
+\begin{verbatim}
+Antal staplar ? 3
+Stapel 1 ? 5
+Stapel 2 ? 2
+Stapel 3 ? 3
+ 
+Extra kartonger: 0
+\end{verbatim}
+
+\vspace{0.5cm}
+\fe{Körningsexempel 3}
+
+\begin{verbatim}
+Antal staplar ? 6
+Stapel 1 ? 30
+Stapel 2 ? 5
+Stapel 3 ? 10
+Stapel 4 ? 15
+Stapel 5 ? 13
+Stapel 6 ? 30
+ 
+Extra kartonger: 261
+\end{verbatim}
+
+%\section*{Indata}
+%På första raden står ett heltal $N$, antalet staplar. På andra raden står $N$ heltal $a_i$, antalet kartonger i varje stapel. 
+
+%\section*{Utdata}
+%Programmet ska skriva ut ett heltal: det minimala antalet extra flyttkartonger som behöver läggas till den första stapeln för att det ska vara möjligt att ta sig till den sista stapeln.
+
+\end{multicols}
+\fe{Poängsättning}
+
+För testfall värda 
+\begin{tabular}{llll}
+$1$ poäng & gäller att &$N=3$ & , $1 \le a_i \le 20$. \\
+$1$ poäng &  & $3\le N\le 5$ & , $1 \le a_i \le 100$.\\
+$1$ poäng &  & $5\le N\le 10$ & , $1 \le a_i \le 1000$. \\
+$2$ poäng &  & $10\le N\le 20$ &, $1 \le a_i \le 3000$. \\
+%$20$ poäng & gäller att &$N=3$ & , $1 \le a_i \le 20$. \\
+%$20$ poäng &  & $3\le N\le 5$ & , $1 \le a_i \le 100$.\\
+%$20$ poäng &  & $5\le N\le 10$ & , $1 \le a_i \le 1000$. \\
+%$40$ poäng &  & $10\le N\le 20$ &, $1 \le a_i \le 3000$. \\
+\end{tabular} 
+
+\newpage
+\specialsection*{Uppgift 4 -- Brickor}
+
+Karin har hittat på ett ensamspel som spelas med Othello-brickor, vilka är
+svarta på ena sidan och vita på andra sidan. Hon lägger ut en rad med
+brickor, som var och en kan vara svart eller vit. Målet är att få alla brickor att ha den vita sidan uppåt.
+
+Ett ``drag'' är att ``plocka ut'' ett intilliggande par av brickor
+någonstans ur sekvensen, vända på dem (vit blir svart, svart blir
+vit), och lägga tillbaka dem antingen i början av raden eller i slutet av
+raden, utan att ändra parets inbördes ordning.
+
+Skriv ett program som, givet den ursprungliga raden av brickor (en
+sträng med enbart bokstäverna \texttt S och \texttt V och längd mellan
+3 och 15 tecken), skriver ut det minsta antalet drag som behövs för
+att göra alla brickor vita. För givna testdata kommer det alltid vara
+möjligt att nå målet.
+
+\begin{center}
+\includegraphics[width=8cm]{brickor.eps}\\
+\ku{En möjlig dragsekvens i exempel 2}
+\end{center}
+
+\vspace{0.5cm}
+
+\fe{Körningsexempel 1}
+
+\begin{verbatim}
+Brickor ? SVVSVVV
+
+Minst antal drag: 2
+\end{verbatim}
+
+\vspace{0.5cm}
+\fe{Körningsexempel 2}
+
+\begin{verbatim}
+Brickor ? VSVSSSVVVV
+
+Minst antal drag: 4
+\end{verbatim}
+
+
+%\section*{Utdata}
+%Skriv ut ett enda tal: antal operationer som behövs för att göra alla brickor vita.
+
+\vspace{0.5cm}
+
+\fe{Poängsättning}
+
+För testfall värda $3$ poäng är strängens längd högst 10, och svaret högst 6.\\
+För testfall värda $2$ poäng gäller inga speciella begränsningar.
+
+%\section*{Poängsättning}
+%För testfall värda $60$ poäng är strängens längd högst 10, och svaret är högst 4.
+%För testfall värda $40$ poäng gäller inga speciella begränsningar.
+
+\newpage
+\specialsection*{Uppgift 5 -- DuTub}
+
+Du vet att du borde lägga dig vid det här laget! Men du ska bara kolla
+{\em lite} mer på DuTub innan du lägger dig.
+
+Det finns ett antal {\em kategorier} du är intresserad av. Varje
+video på DuTub kan tillhöra en eller flera kategorier. Innan du lägger
+dig måste du ha sett minst en video i varje kategori. Men du vill
+förstås inte vara uppe längre än nödvändigt.
+
+Skriv ett program som, givet en lista på videor, beräknar den minsta
+möjliga tid du måste titta för att ha sett minst en video från varje kategori.
+
+Programmet ska läsa in antalet videor $N$ och sedan, för var och en av
+de $N$ videorna, dess längd i sekunder (ett heltal mellan 1 och
+900) samt en sträng som anger de kategorier som videon tillhör. Varje
+bokstav (som är mellan \texttt a och \texttt j) betecknar en kategori. Varje
+video tillhör minst en kategori, och inga kategorier upprepas i en videos
+beskrivning. Det kan sammanlagt finnas högst 10 olika kategorier. Programmet ska skriva ut det minsta antalet sekunder du behöver spendera på DuTub innan du sett videor ur alla kategorier.
+
+%\section*{Indata}
+
+%På första raden står antalet videor $N$.
+%Därefter följer $N$ rader, som beskriver videorna.
+%Vardera av dessa rader innehåller först ett heltal $d_i$ ($1 \le d_i
+%\le 900$), videons längd i sekunder, och sedan en sträng med dess kategorier.
+%Kategorierna representeras som gemena bokstäver, \texttt a till \texttt j.
+
+%Varje video har minst en kategori, och inga kategorier upprepas i en videos beskrivning.
+%Det kan sammanlagt högst finnas 10 olika kategorier.
+
+%\section*{Utdata}
+
+%Skriv ut det minsta antalet minuter du behöver spendera på DuTub innan du sett videor av alla kategorier.
+
+\begin{multicols}{2}
+\fe{Körningsexempel 1}
+
+\begin{verbatim}
+Antal videor ? 5
+Video 1, längd      ? 200 
+Video 1, kategorier ? ei
+Video 2, längd      ? 150 
+Video 2, kategorier ? e
+Video 3, längd      ? 10
+Video 3, kategorier ? g
+Video 4, längd      ? 50
+Video 4, kategorier ? gb
+Video 5, längd      ? 60
+Video 5, kategorier ? i
+
+Svar: 250
+\end{verbatim}
+\vfill\columnbreak
+
+\fe{Körningsexempel 2}
+
+\begin{verbatim}
+Antal videor ? 6
+Video 1, längd      ? 268 
+Video 1, kategorier ? abe
+Video 2, längd      ? 271 
+Video 2, kategorier ? ca
+Video 3, längd      ? 262
+Video 3, kategorier ? da
+Video 4, längd      ? 145
+Video 4, kategorier ? cd
+Video 5, längd      ? 150
+Video 5, kategorier ? ebc
+Video 6, längd      ? 143
+Video 6, kategorier ? deb
+
+Svar: 412
+\end{verbatim}
+\end{multicols}
+
+%\section*{Förklaring av körningsexempel}
+
+\vspace{-0.3cm}
+\ku{Förklaring av körningsexempel 1: } Här finns det totalt 4 kategorier: \texttt e, \texttt i, \texttt g, \texttt b, som står för ekorrar, igelkottar, getter och bumbibjörnar. Den tredje videon (\texttt{g}) ger ingenting, för vi måste ändå se den fjärde videon (\texttt{gb}), då den är den enda som innehåller bumbibjörnar. Vi föredrar video 1 framför video 2+5, eftersom dess totala tid är
+kortare och täcker in båda kategorierna igelkottar och ekorrar. Svaret är alltså 250 sekunder, genom att titta på den första och fjärde videon.
+
+%\vspace{0.5cm}
+\fe{Poängsättning}
+
+För testfall värda $1$ poäng gäller $1 \le N \le 10$, och varje video tillhör bara en kategori.\\
+För testfall värda $2$ poäng gäller $1 \le N \le 10$.\\
+För testfall värda $2$ poäng gäller $N = 30$.\\
+
+%\section*{Poängsättning}
+%För testfall värda $20$ poäng gäller $1 \le N \le 10$, och varje video har precis en kategori.
+%För testfall värda $40$ poäng gäller $1 \le N \le 10$.
+%För testfall värda $40$ poäng gäller $N = 30$.
+
+\end{document}

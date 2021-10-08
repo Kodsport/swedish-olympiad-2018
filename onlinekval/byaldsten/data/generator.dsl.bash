@@ -43,5 +43,6 @@ tc large-08 gen_random n=100000 max=200000 minage=999690000 maxage=999700000
 tc large-09 gen_random n=100000 max=200000 minage=999699900 maxage=999700000
 
 generate_grader
+generate_cms
 cleanup_programs
 
