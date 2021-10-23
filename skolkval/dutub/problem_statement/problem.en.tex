@@ -1,0 +1,31 @@
+\problemname{MeTube}
+You know that you should be sleeping by now... but you are going to just watch \emph{some} more MeTube before going to bed.
+
+On MeTube, there are number of \emph{categories} you are interested in.
+Each video on MeTube can belong to one or more categories.
+Before going to bed, you must have watched one video in each category.
+Of course you don't want to be up for longer than necessary.
+
+Write a program that, given a list of videos, computes the smallest possible time you must stay up to have seen at least one video from each category.
+
+\section*{Input}
+The first line contains the number of videos $N$ ($N \le 30$).
+
+This is followed by $N$ lines describing the videos.
+Each video is described first by an integer $d_i$ ($1 \le d_i \le 900$), the length of the video in seconds, and then by a string with the categories that the video belongs to.
+In the string, each letter (between \texttt{a} and \texttt{j}) denotes one category.
+Each video belongs to at least one category and no category appears twice in the list for a video.
+
+\section*{Output}
+Output the smallest number of seconds you need to spend on MeTube to watch a video from each category.
+
+\section*{Explanation of sample 1}
+There are four categories: \texttt e, \texttt i, \texttt g, \texttt b.
+Watching the third video (\texttt{g}) is pointless since you must watch the fourth video (\texttt{gb}), since that's the only one in category \texttt{b}.
+We prefer video $1$ over videos $2$ and $5$, since its total time is shorter and covers both categories \texttt{i} and \texttt{e}.
+The answer is $250$ seconds, by watching the first and fourth videos.
+
+\section*{Scoring}
+For test cases worth $20$ points $1 \le N \le 10$, and each video belongs to only one category.\\
+For test cases worth $40$ points $1 \le N \le 10$.\\
+For test cases worth $40$ points $1 \le N \le 30$.

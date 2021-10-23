@@ -1,9 +1,0 @@
-INT(1, 30, n) NEWLINE
-REP(n)
-	INT(1, 900)
-	SPACE
-	REGEX("[a-j]*", cats)
-	ASSERT(UNIQUE(cats))
-	NEWLINE
-END
-EOF
