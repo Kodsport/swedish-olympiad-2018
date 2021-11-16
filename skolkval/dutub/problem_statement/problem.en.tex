@@ -19,13 +19,22 @@ Each video belongs to at least one category and no category appears twice in the
 \section*{Output}
 Output the smallest number of seconds you need to spend on MeTube to watch a video from each category.
 
+\section*{Scoring}
+Your solution will be tested on a set of test case groups.
+To get the points for a group, you need to pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{10cm} |}
+\hline
+Group & Points & Constraints \\ \hline
+  $1$    & $20$        & $N \le 10$, each video belongs to only one category. \\ \hline 
+  $2$    & $40$        & $N \le 10$ \\ \hline
+  $3$    & $40$        & No further constraints. \\ \hline 
+\end{tabular}
+
 \section*{Explanation of sample 1}
 There are four categories: \texttt e, \texttt i, \texttt g, \texttt b.
 Watching the third video (\texttt{g}) is pointless since you must watch the fourth video (\texttt{gb}), since that's the only one in category \texttt{b}.
 We prefer video $1$ over videos $2$ and $5$, since its total time is shorter and covers both categories \texttt{i} and \texttt{e}.
 The answer is $250$ seconds, by watching the first and fourth videos.
 
-\section*{Scoring}
-For test cases worth $20$ points $1 \le N \le 10$, and each video belongs to only one category.\\
-For test cases worth $40$ points $1 \le N \le 10$.\\
-For test cases worth $40$ points $1 \le N \le 30$.
