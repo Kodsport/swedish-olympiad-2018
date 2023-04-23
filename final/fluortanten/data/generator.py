@@ -3,7 +3,7 @@ import random
 
 def getnum(a):
     k = 0
-    while k is 0:
+    while k==0:
         k = random.randrange(-a, a+1)
     return k
 
