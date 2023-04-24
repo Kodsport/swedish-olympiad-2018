@@ -21,14 +21,11 @@ Den vänstra kön är för närvarande $L$ personer lång, och den högra är $R
 Hjälp Paulina avgöra vilken kö hon ska ställa sig i, för att så snabbt som möjligt nå rulltrappans topp.
 
 \section*{Indata}
-Den första raden i indatat består av heltalen $M, S, G$ som är beskrivna i uppgiften.
-Det gäller att $30 \le M \le 200$, $1 \le S \le G \le M$.
+Den första raden innehåller tre heltal $M, S, G$ ($30 \le M \le 200$, $1 \le S \le G \le M$), antalet steg i rulltrapponerna och antalet steg per sekund man färdas om man står still, respektive går i rultrappan.
 
-Nästa rad innehåller decimaltalen $A, B$ som är beskrivna i uppgiften.
-Det gäller att $0.1 \le A, B \le 1$.
+Nästa rad innehåller två decimaltal $A, B$ ($0.1 \le A, B \le 1$), antalet personer per sekund som går på den vänstra respektive högra rulltrappan.
 
-Den sista raden innehåller heltalen $L, R$ som är beskrivna i uppgiften.
-Det gäller att $0 \le L, R \le 100$.
+Den sista raden innehåller två heltal $L, R$ ($0 \le L, R \le 100$), antalet personer i den vänstra respektiva högre rulltrappan just nu.
 
 \section*{Utdata}
 Skriv ut \texttt{latmask} om det snabbaste alternativet är att välja den högra kön och stå i rulltrappan, eller \texttt{friskus} om det snabbaste alternativet är att välja den vänstra kön och gå i rulltrappan.
@@ -36,15 +33,16 @@ Skriv ut \texttt{latmask} om det snabbaste alternativet är att välja den högr
 Det är garanterat att tiden det tar för Paulina att åka upp för rulltrappan skiljer sig med minst 1 sekund mellan de två köerna, så du behöver aldrig bry dig om fallet när båda alternativen är lika snabba.
 
 \section*{Poängsättning}
-Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
-\begin{tabular}{|l|l|l|l|}
-\hline
-Grupp & Poängvärde & Begränsningar \\ \hline
-1     & 40         &  $L = R = 0$ \\ \hline
-2     & 40         &  $S = G$ \\ \hline
-3     & 20         & Inga ytterligare begränsningar \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+    $1$   & $40$     & $L = R = 0$ \\ \hline
+    $2$   & $40$     & $S = G$ \\ \hline
+    $3$   & $20$     & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
 % För att få poäng kommer ditt program behöva klara av testfall både där svaret är \texttt{friskus} och där svaret är \texttt{latmask}.
