@@ -12,4 +12,4 @@ for k in range(N):
         for (n,s) in mx[k].items():
             if (not n+1 in mx[t]) or (s+w>mx[t][n+1]):
                 mx[t][n+1] = s+w
-print "IMPOSSIBLE" if not mx[N-1] else max([float(s)/n for (n,s) in mx[N-1].items()])
+print("IMPOSSIBLE" if not mx[N-1] else max([float(s)/n for (n,s) in mx[N-1].items()]))
