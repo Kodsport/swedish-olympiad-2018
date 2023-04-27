@@ -33,4 +33,6 @@ void run() {
 	{
 		assert(0);
 	}
+
+	Eof();
 }
