@@ -69,15 +69,15 @@ int main(int argc, char** argv) {
     vector<vi> P(N, vi(N));
     rep(i,0,N) rep(j,0,N) fin >> P[i][j];
 
-    vector<vi> add(N, vi(N));
+    /*vector<vi> add(N, vi(N));
     rep(i,0,N) rep(j,0,N) cin >> add[i][j];
 
     rep(i,0,N) rep(j,0,N) {
 		assert(add[i][j] % P[i][j] == 0);
 		M[i][j] += add[i][j] / P[i][j];
-	}
+	}*/
 
     long long withoutRes = compute(M);
 
-    cout << withoutRes << endl;
+    cout << withoutRes+1 << endl;
 }

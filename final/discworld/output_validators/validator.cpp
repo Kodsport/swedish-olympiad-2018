@@ -122,6 +122,7 @@ int main(int argc, char** argv) {
 
         bestAnswer -= withoutRes;
         withRes -= withoutRes;
+        cerr << withoutRes << " " << withRes << " " << (use/(K+0.)) << endl;
 
         assert(bestAnswer > 0);
         assert(withRes >= 0);
