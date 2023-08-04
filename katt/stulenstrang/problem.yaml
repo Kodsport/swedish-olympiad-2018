@@ -7,5 +7,5 @@ grading:
     objective: max
     show_test_data_groups: yes
 limits:
-    time_multiplier: 13
+    time_multiplier: 3
 type: scoring

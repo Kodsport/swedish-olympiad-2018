@@ -7,6 +7,6 @@ grading:
     objective: max
     show_test_data_groups: yes
 limits:
-    time_multiplier: 20
+    time_multiplier: 270
 type: scoring
 validation: custom score
