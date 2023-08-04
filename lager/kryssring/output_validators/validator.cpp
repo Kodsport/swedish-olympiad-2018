@@ -123,7 +123,7 @@ int main(int argc, char** argv) {
 		else {
 			double r = (cost - best) / (double)(2 * secondBest - best);
 			assert(r <= 1);
-			double score = min(10, 10 * (1-r));
+			double score = min(10.0, 10 * (1-r));
 			accept(score);
 		}
     } catch(...) {
