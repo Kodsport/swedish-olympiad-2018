@@ -31,17 +31,20 @@ Raden ska innehålla "ja" om det är möjligt att placera ut noterna i intervall
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
+
 \noindent
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-1     & 25         & $n \le 50$ \\ \hline
-2     & 25         & $n \le 5000$ \\ \hline
-3     & 25         & $m \le 5$ \\ \hline
-4     & 25         & $n, m, q \le 10^5$ \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $25$      & $n,m,q \le 50$ \\ \hline
+  $2$    & $25$      & $n,m,q \le 5000$ \\ \hline
+  $3$    & $25$      & $m \le 5$  \\ \hline
+  $4$    & $25$      & Inga ytterligare begränsningar \\ \hline
 \end{tabular}
 
-\section*{Förklaring av Sample 1}
-Eftersom vi bara har tre strängar kan vi omöjligt representera sekvensen $1, 2, 2, 3, 4$.
+\section*{Förklaring av exempelfall}
+I exempelfall $1$ har vi bara tre strängar och kan därmed omöjligt representera sekvensen $1, 2, 2, 3, 4$.
 Det gör att svaret blir nej för första och andra intervallet.
 Resten av intervallen går däremot att tilldela till strängar, t.ex. kan vi tilldela noterna i intervallet $(1, 5)$ till strängarna $2, 1, 2, 2, 3$.
+
+I exempelfall $2$ finns det bara en möjlig tilldelning av noter till strängar som funkar: $1, 2, 3, 1, 2, 3$.

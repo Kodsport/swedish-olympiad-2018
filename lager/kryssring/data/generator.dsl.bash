@@ -3,7 +3,7 @@
 PPATH=$(realpath ..)
 . ../../testdata_tools/gen.sh
 
-setup_dirs
+
 use_solution ../kryssning_manyiters.py pypy
 compile gen.py
 
@@ -30,4 +30,4 @@ ca 8 n=500 m=500 lo=0.3 hi=0.6 bias=0 keep=0.5
 ca 9 n=300 m=500 lo=0.35 hi=0.7 bias=0 keep=0.15
 ca 10 n=500 m=500 lo=0.3 hi=0.7 bias=0 keep=0
 
-cleanup_programs
+

@@ -3,15 +3,18 @@
 PPATH=$(realpath ..)
 . ../../testdata_tools/gen.sh
 
-setup_dirs
 use_solution sol_n_plus_q.cpp
 compile generator.cpp # opt
 
 samplegroup
 sample 1
+sample 2
 
 # n, m, q <= 50
 group grupp1 25
+limits maxn=50 maxm=50 maxq=50
+tc 1
+tc 2
 tc small-1 generator 1 6 4 4 random random
 tc small-2 generator 2 20 3 10 random random
 tc small-3 generator 3 50 2 50 often_equal 0.6 random
@@ -29,6 +32,7 @@ tc small-14 generator 14 25 3 10 random wide
 
 # n, m, q <= 5000
 group grupp2 25
+limits maxn=5000 maxm=5000 maxq=5000
 include_group grupp1
 tc medium-15 generator 15 5000 4999 5000 unidirectional 0.0 wide
 tc medium-16 generator 16 5000 5000 5000 unidirectional 0.0 wide
@@ -47,6 +51,7 @@ tc medium-28 generator 28 5000 1 5000 random narrow 2
 
 # m <= 5
 group grupp3 25
+limits maxm=5
 tc narrow-29 generator 29 100000 5 100000 random random
 tc narrow-30 generator 30 100000 5 100000 often_equal 0.99 random
 tc narrow-31 generator 31 100000 4 100000 unidirectional 0.01 random
@@ -87,4 +92,4 @@ tc large-60 generator 60 100000 100000 1 random random
 tc large-61 generator 61 100000 2058 100000 unidirectional 0.0008 random
 tc large-62 generator 62 100000 10 100000 often_equal 0.9999 wide
 
-cleanup_programs
+

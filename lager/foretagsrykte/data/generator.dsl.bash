@@ -3,7 +3,7 @@
 PPATH=$(realpath ..)
 . ../../testdata_tools/gen.sh
 
-setup_dirs
+
 use_solution sl.cpp
 compile gen_random.py
 
@@ -13,6 +13,8 @@ sample 2
 
 # 2 <= n <= 20
 group grupp1 12
+limits maxn=20
+tc 1
 tc small-01 gen_random n=10 k=20 lo=1 hi=10
 tc small-02 gen_random n=20 k=10000 lo=1 hi=1000
 tc small-03 gen_random n=20 k=10000 lo=1 hi=100000
@@ -23,7 +25,9 @@ tc small-07 gen_random n=20 k=1000000000 lo=1 hi=10000000 dist=same
 
 # 2 <= n <= 1000
 group grupp2 17
+limits maxn=1000
 include_group grupp1
+tc 2
 tc medium-01 gen_random n=1000 k=0 lo=1 hi=10
 tc medium-02 gen_random n=1000 k=5 lo=1 hi=10
 tc medium-03 gen_random n=1000 k=2000000 lo=1 hi=10
@@ -39,6 +43,7 @@ tc medium-12 gen_random n=1000 k=2000000000 lo=1 hi=10000000
 
 # k <= 1000, r_i <= 1000
 group grupp3 25
+limits maxk=1000 maxr=1000
 tc lowcost-01 gen_random n=400000 k=1000 lo=1 hi=1000
 tc lowcost-02 gen_random n=400000 k=1000 lo=1 hi=1000 dist=exp
 tc lowcost-03 gen_random n=400000 k=10 lo=1 hi=1000
@@ -49,6 +54,7 @@ tc lowcost-07 gen_random n=400000 k=1000 lo=1 hi=5
 
 # All r_i are the same
 group grupp4 23
+limits samer=1
 tc same-01 gen_random n=10 k=50 lo=1 hi=10 dist=same
 tc same-02 gen_random n=10 k=0 lo=1 hi=10 dist=same
 tc same-03 gen_random n=10 k=50 lo=1 hi=6 dist=same
@@ -72,4 +78,3 @@ tc large-06 gen_random n=400000 k=700000 lo=1 hi=1000 dist=exp
 tc large-07 gen_random n=400000 k=1000 lo=1 hi=1000 dist=exp
 tc large-08 gen_random n=400000 k=2000000000 lo=1 hi=10000000 dist=exp
 
-cleanup_programs
