@@ -7,4 +7,4 @@ a = [random.randrange(a_min, a_max + 1) for _ in range(n)]
 
 
 print(n)
-print(' '.join(map(str, a)));
+print(' '.join(map(str, a)))

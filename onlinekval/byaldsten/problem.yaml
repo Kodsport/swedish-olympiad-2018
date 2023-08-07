@@ -8,6 +8,5 @@ limits:
     time_multiplier: 2
 
 grading:
-    on_reject: grade
-    objective: max
-    range: 0 100
+    show_test_data_groups: yes
+    
