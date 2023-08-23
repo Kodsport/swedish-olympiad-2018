@@ -13,12 +13,12 @@ Vidare finns $m$ olika vägavsnitt som var och en leder från en plats $u_i$ til
 Den som är lite matematiskt intresserad skulle kunna kalla detta för en riktad och viktad acyklisk graf.
 
 \begin{figure}[h]
-    \includegraphics[width=7cm]{trevlig.pdf}
+    \includegraphics[width=7cm]{trevlig.png}
     \caption{Kartan i det andra exemplet. Den trevligaste vägen är $1\rightarrow 3\rightarrow 5$.}
 \end{figure}
 
 \section*{Indata}
-Den första raden innehåller de två heltalen $n$ och $m$ ($2 \leq n \leq 10^5$ , $1 \leq m \leq 2\cdot 10^5$), beskrivna i problemet..
+Den första raden innehåller de två heltalen $n$ och $m$ ($2 \leq n \leq 10^5$ , $1 \leq m \leq 2\cdot 10^5$), antalet platser och antalet vägavsnitt.
 
 Var och en av de följande $m$ raderna beskriver ett vägavsnitt och innehåller tre heltal $u_i$, $v_i$ och $w_i$ ($1 \leq u_i < v_i \leq n$, $1 \le w_i \le 2\cdot 10^6$),
 vilket betyder att vägavsnittet går från plats $u_i$ till plats $v_i$ och har trevlighetsfaktor $w_i$.
@@ -34,10 +34,10 @@ Svaret anses korrekt om dess relativa eller absoluta fel är högst $10^{-6}$.
 Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-$1$     & $21$         &  $2 \le n \le 10$, $1 \le m \le 20$ \\ \hline
-$2$     & $41$         &  $2 \le n \le 1000$, $1 \le m \le 2000$ \\ \hline
-$3$     & $38$         & Inga ytterligare begränsningar. \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$   & $21$       & $2 \le n \le 10$, $1 \le m \le 20$ \\ \hline
+  $2$   & $41$       & $2 \le n \le 1000$, $1 \le m \le 2000$\\ \hline
+  $3$   & $28$       & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}

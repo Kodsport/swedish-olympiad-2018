@@ -12,8 +12,8 @@ Det kan också hända att skattkartan leder runt Paulina i en oändlig cykel av 
 Kan du hjälpa Paulina att avgöra vilket mål hon når, eller om hon kommer gå runt i all oändlighet.
 
 \section*{Indata}
-Indatan börjar med en rad som innehåller antalet rader $R$ i skattkartan.
-Därefter följer en rad som innehåller antalet kolumner $C$ i skattkartan.
+Den första raden innehåller ett heltal $R$ ($1 \leq R \leq 100$), antalet rader i skattkartan.
+Därefter följer en rad som innehåller ett heltal $C$ ($1 \leq C \leq 100$), antalet kolumner i skattkartan.
 Slutligen följer $R$ rader som alla innehåller $C$ tecken vardera -- själva skattkartan.
 
 Följande tecken förekommer i skattkartan:
@@ -38,8 +38,14 @@ Ditt program ska skriva ut en enda rad med texten
 \end{itemize}
 
 \section*{Poängsättning}
-\begin{description}
-\item[40 poäng] Skattkartan är densamma som finns på \href{https://www.progolymp.se/2018/affisch.pdf}{vår affisch}.
-\item[30 poäng] Skattkartan kommer alltid leda antingen till sushin eller samurajen, och har högst 100 rader och kolumner.
-\item[30 poäng] Skattkartan har högst 100 rader och kolumner.
-\end{description}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $40$      & Skattkartan är densamma som finns på \href{https://www.progolymp.se/2018/affisch.pdf}{vår affisch} \\ \hline
+  $2$    & $30$      & Skattkartan kommer alltid leda antingen till sushin eller samurajen \\ \hline
+  $3$    & $30$      & Inga ytterligare begränsningar  \\ \hline
+\end{tabular}

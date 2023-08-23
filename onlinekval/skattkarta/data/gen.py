@@ -1,8 +1,20 @@
 import random
 import sys
 
-R = 20
-C = 20
+def cmdlinearg(name, default=None):
+    for arg in sys.argv:
+        if arg.startswith(name + "="):
+            return arg.split("=")[1]
+    if default is None:
+        print("missing parameter", name)
+        sys.exit(1)
+    return default
+
+random.seed(int(cmdlinearg('seed', sys.argv[-1])))
+
+
+R = 100
+C = 100
 
 G = [[random.choice(['<', 'v', '>', '^']) for _ in range(C)] for _ in range(R)]
 

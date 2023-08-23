@@ -28,22 +28,23 @@ Pär vet inte riktigt hur Oskar kommer att bete sig.
 Därför vill han veta vilken maximala nöjdhet han kan garantera sig utan att veta något om Oskars beteende.
 
 \section*{Indata}
-Indatan börjar med en rad som innehåller antalet rätter $N$ i buffén.
-Därefter följer en rad med $N$ stycken heltal, varje rätts godhet $a_i$.
+Den första raden innehåller ett heltal $N$ ($2 \leq N \leq 3*10^5$), antalet rätter i buffén.
+Därefter följer en rad med $N$ stycken heltal $a_1, a_2, \ldots, a_i$ ($-100 \leq a_i \leq 100$), godheten på den $i$:te rätten.
 
 \section*{Utdata}
-Programmet ska skriva ut ett heltal - den maximala nöjdhet Pär garanterat kan få.
+Programmet ska skriva ut ett heltal: den maximala nöjdhet Pär garanterat kan få.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-1     & 25         & $2 \le N \le 100$, $0 \le a_i \le 100$ \\ \hline
-2     & 25         & $2 \le N \le 1000$, $0 \le a_i \le 100$ \\ \hline
-3     & 25         & $2 \le N \le 300\,000$, $0 \le a_i \le 100$ \\ \hline
-4     & 25         & $2 \le N \le 300\,000$, $-100 \le a_i \le 100$ \\ \hline
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $25$      & $2 \le N \le 100$, $0 \le a_i \le 100$ \\ \hline
+  $2$    & $25$      & $2 \le N \le 1000$, $0 \le a_i \le 100$ \\ \hline
+  $3$    & $25$      & $0 \le a_i \le 100$ \\ \hline
+  $4$    & $25$      & Inga ytterligare begränsningar  \\ \hline
 \end{tabular}
 
 \section*{Förklaring av sample}

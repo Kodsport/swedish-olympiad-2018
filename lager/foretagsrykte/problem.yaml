@@ -1,0 +1,9 @@
+name: foretagsrykte
+author: Simon Lindholm
+source: Programmeringsolympiadens lägertävling 2018
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+grading:
+    show_test_data_groups: yes
+type: scoring
+

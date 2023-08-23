@@ -1,0 +1,50 @@
+\problemname{Guitar Hero}
+
+I PO-juryns 100\% originella spel String Instrument Champion visas noter i en låt som punkter på en gitarrs strängar.
+Noterna representeras som heltal, där heltalet representerar tonhöjden hos noten.
+Inga två noter spelas samtidigt i någon av String Instrument Champion's låtar.
+
+En låt kan innehålla många fler noter än det finns strängar på gitarren.
+Därför placerar vi ut noterna på stängarna enligt en viss uppsättning regler.
+Det går bra ibland, men inte alltid. När vi placerar ut noterna på strängarna har vi följande krav:
+\begin{itemize}
+\item Den första noten får vara på valfri sträng.
+\item Om den senaste noten hade lägre tonhöjd än nästa not, så måste nästa not vara på en högre sträng.
+\item Om den senaste noten hade högre tonhöjd än nästa not, så måste nästa not vara på en lägre sträng.
+\item Om den senaste noten hade samma tonhöjd som nästa not, så måste nästa not vara på samma sträng.
+\end{itemize}
+
+Du får en låt med $n$ 1-indexerade toner, och gitarren har $m$ strängar. Du får också $q$ intervall i låten.
+Ett intervall representeras av heltalen $a$ och $b$, där första noten i intervallet har index $a$ och sista noten index $b$.
+
+För varje intervall undrar vi nu: är det möjligt att placera ut de noter som är med i intervallet på strängar så att kraven är uppfyllda?
+
+\section*{Indata}
+Den första raden innehåller tre heltal $n$, $m$ och $q$ ($1 \leq n, m, q \leq 10^5$).
+Den andra raden innehåller $n$ heltal $t_i$ ($1 \leq t_i \leq 10^9$).
+Sen följer $q$ rader med två heltal $a_i$ och $b_i$ vardera ($1 \leq a_i \leq b_i \leq n$).
+
+\section*{Utdata}
+Du ska skriva ut $q$ rader med "ja" eller "nej", en för varje intervall.
+Raden ska innehålla "ja" om det är möjligt att placera ut noterna i intervallet $a_i$ till $b_i$ så att kraven är uppfyllda, annars "nej".
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $25$      & $n,m,q \le 50$ \\ \hline
+  $2$    & $25$      & $n,m,q \le 5000$ \\ \hline
+  $3$    & $25$      & $m \le 5$  \\ \hline
+  $4$    & $25$      & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+\section*{Förklaring av exempelfall}
+I exempelfall $1$ har vi bara tre strängar och kan därmed omöjligt representera sekvensen $1, 2, 2, 3, 4$.
+Det gör att svaret blir nej för första och andra intervallet.
+Resten av intervallen går däremot att tilldela till strängar, t.ex. kan vi tilldela noterna i intervallet $(1, 5)$ till strängarna $2, 1, 2, 2, 3$.
+
+I exempelfall $2$ finns det bara en möjlig tilldelning av noter till strängar som funkar: $1, 2, 3, 1, 2, 3$.
