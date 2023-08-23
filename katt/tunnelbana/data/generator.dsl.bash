@@ -5,7 +5,7 @@ PPATH=$(realpath ..)
 
 ulimit -s unlimited
 
-use_solution ng_100.cpp
+use_solution ng_fixed.cpp
 compile gen_random.py
 compile gen_star.py
 
