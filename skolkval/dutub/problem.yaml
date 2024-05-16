@@ -1,7 +1,8 @@
+name: dutub
 author: Arash Rouhani
 source: Programmeringsolympiadens skolkval 2018
 rights_owner: Programmeringsolympiaden
 license: cc by-sa
 type: scoring
 grading:
-  show_test_data_groups: true
+    show_test_data_groups: true

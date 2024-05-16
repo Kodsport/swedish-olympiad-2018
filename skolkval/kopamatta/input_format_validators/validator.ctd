@@ -1,4 +1,0 @@
-# Uniqueness is validated in submissions/accepted/sl.cpp (it's a bit complex)
-INT(1, 1000000000000, a) SPACE
-INT(a, 1000000000000, b) NEWLINE
-EOF
