@@ -1,6 +1,0 @@
-
-python3 gen.py n=10 r=3 6 > secret/g1/g1.in # modified by hand a bit
-python3 gen.py n=10 r=3 7 > secret/g2/g2.in
-python3 gen.py n=10 r=4 7 > secret/g3/g3.in
-python3 gen.py n=15 r=500 64 >secret/g4/g4.in
-python3 gen.py n=15 r=500 6 >secret/g5/g5.in

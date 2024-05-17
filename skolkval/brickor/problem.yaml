@@ -1,11 +1,8 @@
 name: brickor
 author: Fredrik Ekholm
-source: Programmeringsolympiaden 2018
+source: Programmeringsolympiadens skolkval 2018
 rights_owner: Programmeringsolympiaden
 license: cc by-sa
-grading:
-    on_reject: grade
-    objective: max
-    range: 0 100
-
 type: scoring
+grading:
+    show_test_data_groups: yes

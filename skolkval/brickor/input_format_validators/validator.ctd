@@ -1,1 +1,0 @@
-REGEX("[SV]{3,15}") NEWLINE EOF
