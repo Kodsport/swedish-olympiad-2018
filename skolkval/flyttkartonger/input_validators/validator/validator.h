@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <assert.h>
-#include </usr/include/c++/14.1.1/vector>
+#include <vector>
 #include <iostream>
 #include <algorithm>
 #include <sstream>
