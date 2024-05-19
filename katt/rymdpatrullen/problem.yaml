@@ -2,7 +2,6 @@ source: Programmeringsolympiadens KATT 2018
 rights_owner: Balkan Olympiad 2011
 license: permission
 grading:
-    objective: max
     show_test_data_groups: yes
 type: scoring
 validation: custom
