@@ -4,5 +4,4 @@ rights_owner: Programmeringsolympiaden
 license: cc by-sa
 type: scoring
 grading:
-    objective: max
     show_test_data_groups: yes
