@@ -1,0 +1,29 @@
+\problemname{Tower Building}
+Little Dirk Ref wants to build as tall a tower as possible with his $N$ blocks. All blocks are rectangular boxes with a square base,
+and a tower is a set of blocks stacked directly on top of each other (two blocks may not be placed side by side).
+To prevent the tower from becoming unstable and collapsing, each block's width (the side of the square base it stands on)
+must always be strictly less than the width of the block it stands on. Thus, the tower is built with the widest blocks at the bottom, and narrower
+blocks the higher up you go. Additionally, each block must be at least as tall as the block below it, so that the tower looks nice.
+Help Dirk figure out the maximum height of the tower he can build.
+
+\section*{Input}
+The first line contains an integer $N$ ($1 \leq N \leq 10^5$), the number of blocks Dirk has.
+Then follow $N$ lines, one for each block. On the $i$th of these lines are two integers, $W_i$ and $H_i$ ($1 \leq W_i, H_i \leq 10^9$),
+the $i$th block's width and height.
+
+\section*{Output}
+Output one integer: the maximum height that Dirk can build.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $19$      & $1 \leq N \leq 10$, $H_i \le 10^5$, $W_i = N+1 - i$, i.e.\ the widths are $N$, $N-1$, $\dots$, $1$, in order. \\ \hline
+  $2$    & $35$      & $1 \leq N \leq 500$, $H_i \le 10^5$, $W_i = N+1 - i$ \\ \hline
+  $3$    & $20$      & $1 \leq N \leq 500$, $H_i \le 10^5$ \\ \hline
+  $4$    & $26$      & No additional constraints.  \\ \hline
+\end{tabular}

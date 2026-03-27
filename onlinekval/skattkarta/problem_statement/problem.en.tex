@@ -1,0 +1,51 @@
+\problemname{Treasure Map}
+Paulina likes Japan, a lot.
+During a vacation in Tokyo she visits an amusement park where there is a large maze.
+To navigate the maze, Paulina receives a treasure map that she follows.
+
+On the treasure map, each cell is marked with arrows to show which direction to go from that cell.
+
+Paulina always starts in the cell in the top-left corner of the treasure map, and then follows the arrows.
+In the maze there are two different goals: a piece of delicious salmon sushi, and a scary samurai.
+It can also happen that the treasure map leads Paulina around in an infinite cycle of cells so she never reaches a goal.
+
+Can you help Paulina determine which goal she reaches, or if she will walk around forever?
+
+\section*{Input}
+The first line contains an integer $R$ ($1 \leq R \leq 100$), the number of rows in the treasure map.
+Then follows a line containing an integer $C$ ($1 \leq C \leq 100$), the number of columns in the treasure map.
+Finally follow $R$ lines each containing $C$ characters --- the treasure map itself.
+
+The following characters appear in the treasure map:
+\begin{itemize}
+\item ``\texttt{<}'' --- cell with a left arrow,
+\item ``\texttt{>}'' --- cell with a right arrow,
+\item ``\texttt{v}'' --- cell with a down arrow,
+\item ``$\wedge$'' --- cell with an up arrow,
+\item ``\texttt{A}'' --- the cell where the sushi is located,
+\item ``\texttt{B}'' --- the cell where the samurai is located.
+\end{itemize}
+
+Paulina starts at the first cell in the first row of the treasure map.
+The treasure map is constructed so that Paulina will never leave the maze when following the arrows.
+
+\section*{Output}
+Your program shall output a single line with the text
+\begin{itemize}
+\item ``\texttt{sushi}'' if she reaches the sushi by following the arrows,
+\item ``\texttt{samuraj}'' if she reaches the samurai by following the arrows,
+\item ``\texttt{cykel}'' if she will run around forever by following the arrows.
+\end{itemize}
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $40$      & The treasure map is the same as on \href{https://www.progolymp.se/2018/affisch.pdf}{our poster} \\ \hline
+  $2$    & $30$      & The treasure map will always lead either to the sushi or the samurai \\ \hline
+  $3$    & $30$      & No additional constraints.  \\ \hline
+\end{tabular}

@@ -1,0 +1,33 @@
+\problemname{Village Elder}
+Once upon a time there was a small village called Stackköping.
+The inhabitants of Stackköping had several special traditions.
+One tradition was that the oldest living villager at the end of each year had to give a New Year's speech.
+Another tradition was that at most one new person could be born each year, and according to some experts, this was what eventually led to Stackköping's downfall.
+
+During an archaeological excavation, a document was found showing the birth and death years of all $n$ people who ever lived in Stackköping.
+You have obtained the document, and want to calculate how many New Year's speeches each person gave.
+
+The New Year's speech is always the very last thing that happens each year, so no one is born or dies after the speech that occurs the same year.
+If no one is alive at New Year's, then no speech is given at all.
+Otherwise, a speech is always given, even if only one person is alive.
+
+\section*{Input}
+
+The first line contains an integer $n$ ($1 \le n \le 10^5$), the number of people.
+The following $n$ lines contain two integers $f_i$ and $d_i$ ($0 \le f_i < d_i \le 10^9$): the years person number $i$ was born and died, respectively.
+All values $f_i$ are distinct.
+
+\section*{Output}
+Output $n$ lines with one integer on each line, where the $i$th integer is how many New Year's speeches the $i$th person gave.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $30$      & $1 \le n \le 1000$ \\ \hline
+  $2$    & $25$      & Everyone lived equally long, and $f_i, d_i \le 3\cdot 10^5$ \\ \hline
+  $3$    & $45$      & No additional constraints.  \\ \hline
+\end{tabular}

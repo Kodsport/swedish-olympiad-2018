@@ -1,0 +1,64 @@
+\problemname{Rulltrappa}
+Paulina Osqulda\footnote{Osqulda is a student slang term for students at the Royal Institute of Technology in Stockholm, see \url{https://sv.wikipedia.org/wiki/Osquar_och_Osqulda}.} studies at KTH in Stockholm, and takes the subway to school every morning.
+When she arrives at her subway station, she must ride up an escalator to get out.
+
+In the escalator, two different queues often form.
+On the right side of the escalator, people who want to stand still line up, while you line up on the left side if you prefer to walk on the escalator (to get up faster).
+
+Paulina has noticed that the queue on the left side is usually \emph{extremely long}, since everyone is so stressed about getting to work and wants to walk up the escalator quickly.
+Recently she has been wondering whether it might actually be faster to choose the right queue instead, since the queue there is often shorter.
+
+The escalator is $M$ steps long in total.
+If you stand on the escalator, you travel $S$ steps per second upward.
+If you walk on the escalator instead, you travel $G$ steps per second upward.
+
+A total of $A$ people per second can start walking on the escalator from the left queue, while $B$ people per second can step onto the escalator from the right queue.
+This means that at the beginning, one person gets on the escalator.
+Before a new person can get on the escalator, they must wait $\frac{1}{A}$ (or $\frac{1}{B}$ seconds respectively).
+
+The left queue is currently $L$ people long, and the right queue is $R$ people long.
+
+Help Paulina decide which queue she should join, to reach the top of the escalator as quickly as possible.
+
+\section*{Input}
+The first line contains three integers $M, S, G$ ($30 \le M \le 200$, $1 \le S \le G \le M$), the number of steps in the escalator and the number of steps per second you travel if you stand still, or walk on the escalator respectively.
+
+The next line contains two decimal numbers $A$ and $B$ ($0.1 \le A, B \le 1$), the number of people per second that get on the left and right escalator respectively.
+
+The last line contains two integers $L$ and $R$ ($0 \le L, R \le 100$), the number of people in the left and right queue respectively.
+
+\section*{Output}
+Print \texttt{latmask} if the fastest option is to choose the right queue and stand on the escalator, or \texttt{friskus} if the fastest option is to choose the left queue and walk on the escalator.
+
+It is guaranteed that the time it takes Paulina to ride up the escalator differs by at least 1 second between the two queues, so you never need to worry about the case when both options are equally fast.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Group & Points & Constraints \\ \hline
+    $1$   & $40$     & $L = R = 0$ \\ \hline
+    $2$   & $40$     & $S = G$ \\ \hline
+    $3$   & $20$     & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+In sample 1, both queues are empty, so Paulina can immediately start going up the escalator.
+If she stands still on the escalator, she travels at 1 step per second, so it takes $\frac{50}{1} = 50$ seconds.
+If she walks up the escalator instead, she travels at 2 steps per second, so it takes $\frac{50}{2} = 25$ seconds, which is the faster option.
+
+\section*{Explanation of Sample 2}
+In sample 2, it is not faster for Paulina to walk up the escalator than to stand still (since she has sprained her foot).
+However, both sides have a queue.
+
+On the right side of the queue there are 3 people, and it takes $\frac{3}{0.5} = 6$ seconds before those people have gotten on the escalator.
+On the left side there are 4 people instead, and it takes $\frac{7}{1} = 7$ seconds before those people have gotten on the escalator.
+
+Thus, the faster option is to choose the right queue and stand still on the escalator.
+
+\section*{Explanation of Sample 3}
+If Paulina chooses the left queue and walks up the escalator, she gets up after 129 seconds.
+If she chooses the right queue and stands on the escalator instead, it takes 130 seconds.
