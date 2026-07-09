@@ -1,0 +1,50 @@
+\problemname{Guitar Hero}
+
+In the PO jury's 100\% original game String Instrument Champion, notes in a song are shown as points on a guitar's strings.
+The notes are represented as integers, where the integer represents the pitch of the note.
+No two notes are played simultaneously in any of String Instrument Champion's songs.
+
+A song can contain many more notes than there are strings on the guitar.
+Therefore, we place the notes on the strings according to a certain set of rules.
+This works sometimes, but not always. When placing the notes on the strings, we have the following requirements:
+\begin{itemize}
+\item The first note may be on any string.
+\item If the most recent note had a lower pitch than the next note, the next note must be on a higher string.
+\item If the most recent note had a higher pitch than the next note, the next note must be on a lower string.
+\item If the most recent note had the same pitch as the next note, the next note must be on the same string.
+\end{itemize}
+
+You are given a song with $n$ 1-indexed notes, and the guitar has $m$ strings. You are also given $q$ intervals in the song.
+An interval is represented by the integers $a$ and $b$, where the first note in the interval has index $a$ and the last note has index $b$.
+
+For each interval, we wonder: is it possible to place the notes in the interval on strings so that the requirements are satisfied?
+
+\section*{Input}
+The first line contains three integers $n$, $m$ and $q$ ($1 \leq n, m, q \leq 10^5$).
+The second line contains $n$ integers $t_i$ ($1 \leq t_i \leq 10^9$).
+Then follow $q$ lines with two integers $a_i$ and $b_i$ each ($1 \leq a_i \leq b_i \leq n$).
+
+\section*{Output}
+You shall output $q$ lines with ``ja'' or ``nej'', one for each interval.
+The line shall contain ``ja'' if it is possible to place the notes in the interval $a_i$ to $b_i$ so that the requirements are satisfied, otherwise ``nej''.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $25$      & $n,m,q \le 50$ \\ \hline
+  $2$    & $25$      & $n,m,q \le 5000$ \\ \hline
+  $3$    & $25$      & $m \le 5$  \\ \hline
+  $4$    & $25$      & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+In sample $1$ we only have three strings and can thus impossibly represent the sequence $1, 2, 2, 3, 4$.
+This means the answer is ``nej'' for the first and second interval.
+The remaining intervals can however be assigned to strings, e.g.\ we can assign the notes in the interval $(1, 5)$ to the strings $2, 1, 2, 2, 3$.
+
+In sample $2$ there is only one possible assignment of notes to strings that works: $1, 2, 3, 1, 2, 3$.

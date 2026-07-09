@@ -1,0 +1,45 @@
+\problemname{The Five Card Game}
+Alf and Beata were two youngsters who lived a long, long time ago, in the days before one could spend one's afternoons on programming competitions.
+Their lives were thus much more boring than the lives of today's youth.
+How can one survive without computers, you might ask.
+The answer is very simple: you play cards!
+
+Our two youngsters loved playing cards, and often had large piles of card decks that they received as Christmas gifts every year.
+To avoid filling their rooms with card decks, Beata challenged her friend to a game every evening --- five card.
+
+Five card is played by two players (in our case, Alf and Beata), with a standard deck of $52$ cards where each player has been dealt five cards.
+The players will now play five so-called tricks.
+A trick works as follows: a player $A$ chooses one of their cards and plays it on the table.
+The opponent then chooses one of their cards (which must be of the same suit as the opponent's, if they have one) and plays it on the table.
+If the opponent did not have a card of the same suit, player $A$ won the trick, otherwise the player whose card had the highest value won.
+In the next trick, the player who won the previous trick starts by playing a card.
+They take turns in this way until both players are out of cards, i.e.\ after $5$ tricks.
+
+Alf starts by playing a card in the first trick.
+Given the order in which the two players played their cards, can you determine who won the last trick, and whether either (or both) of the players cheated?
+
+\section*{Input}
+The input begins with five lines containing Alf's cards, in the order the cards were played.
+Then follow five lines with Beata's cards, in the order the cards were played. All cards are distinct.
+
+A card has the form \texttt{suit value}, where the suit is one of \texttt{R, K, H, S} (for diamonds, clubs, hearts, spades), and the value is an integer between 2 and 14.
+
+\section*{Output}
+Start by outputting the player who won the last trick: \texttt{A} if Alf won, and \texttt{B} if Beata won.
+
+If any player cheated, output on the next line the players who cheated.
+If Alf cheated, output \texttt{A fuskar},
+if Beata cheated, output \texttt{B fuskar},
+and if both cheated, output \texttt{A och B fuskar}.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $30$      & All cards played have the same suit \\ \hline
+  $2$    & $30$      & No player cheated \\ \hline
+  $3$    & $40$      & No additional constraints.  \\ \hline
+\end{tabular}

@@ -1,0 +1,43 @@
+\problemname{Vilse i tidtabellen}
+Rakso is on vacation in Duln to see the diving macros. She is standing at a bus stop and needs to get to her hotel ``the nine''. It usually always rains in Duln but today it is freezing cold.
+
+In the joy of being on vacation, far away from her home in the dreary city of Stomholck, Rakso has completely lost track of time -- she does not know what time it is. When she picks up her super smart pocket computer to find out, it dies -- it is too cold outside for it to work!
+
+But Rakso does not give up. She decides to figure out what time it is anyway. To help her, she has:
+\begin{enumerate}
+  \item A timetable on the wall. It shows at which times a bus arrives at the stop she is standing at.
+    The same timetable applies for all days, and only one bus line passes the station.
+  \item A display showing how soon the next $N$ buses arrive at the stop.
+\end{enumerate}
+Buses always arrive exactly when they promise (this is not Stomholck, after all), and only arrive at whole seconds. Right now, when Rakso is observing the timetable and the display, it is also at a whole second. If a bus arrives right now, it will appear on the display with value $0$.
+
+Can you help Rakso write a program that answers what time it is? If there are multiple possible answers, print all of them.
+If there is no valid solution (i.e.\ the display must be wrong), print \texttt{"fel"}.
+
+(Based on a true story. Rakso's real name is something else.)
+
+\section*{Input}
+The first line contains two integers $N$ and $M$ ($1 \leq N \leq 10^6$, $1 \leq M \leq 3000$).
+The second line contains $N$ numbers: $0 \le t_i \le 10^9$, the $i$th time until the next bus as shown on the display, in seconds.
+These are guaranteed to be in increasing order, and no times are the same.
+
+The following $M$ lines contain the times in the timetable in increasing order, in the format \texttt{hh:mm:ss} (between \texttt{00:00:00} and \texttt{23:59:59}).
+The timetable will not contain any repeated times.
+
+\section*{Output}
+Print a single line: the possibilities for what time it could be, separated by spaces.
+The times should be sorted in increasing order, and formatted the same way as in the input.
+
+If there is no possibility at all for what time it could be, print \texttt{"fel"} (without quotes).
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.\\
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Group & Points & Constraints \\ \hline
+    $1$   & $28$     & $N = 3$, $3 \le M \le 10$, no consideration needs to be taken to midnight passing. \\ \hline
+    $2$   & $35$     & $3 \le N \le M \le 1000$ \\ \hline
+    $3$   & $37$     & No additional constraints. \\ \hline
+\end{tabular}

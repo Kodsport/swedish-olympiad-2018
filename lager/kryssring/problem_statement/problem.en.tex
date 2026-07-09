@@ -1,0 +1,52 @@
+\problemname{Noughts and Crosses}
+Simon and Måns are sitting on the subway, playing a game.
+Simon draws an $n \times m$ grid and fills in a few crosses and noughts in the cells.
+He also writes a number on each row.
+
+Måns's task is now to fill in the grid so that \emph{every} cell has a cross or a nought, such that
+there are exactly as many crosses on each row as the number written there.
+The goal for Måns is that every row, column, and diagonal has at most $2$ crosses or noughts in a row.
+
+Simon has placed the crosses and noughts completely at random, so it is not obvious that this is possible.
+However, we can give Måns points depending on how well he succeeded: we define the value of a placement
+as the number of times there are three crosses or three noughts in a row in any row, column, or diagonal
+(in both directions).
+Måns should then try to get as low a value as he can.
+
+Help Måns play the game as well as possible!
+
+\section*{Input}
+\textbf{Note:} the test data for this problem is \emph{open}. It is available as an attachment to the problem.
+The first line contains an integer $0 \le t \le 10$, the index of this test case.
+The case $t = 0$ represents the sample case and should be ignored (you can output anything then).
+
+The second line contains two integers $n$ and $m$ ($2 \le n, m \le 500$): the height and width of the grid.
+The third line contains $n$ integers: the number of crosses that must be placed on each row.
+Then follow $n$ lines, with $m$ characters each: the original grid.
+Each character will be either ``\texttt{.}'', ``\texttt{o}'' or ``$\texttt{x}$'',
+where ``\texttt{.}'' means the cell has not yet been filled in.
+
+It is guaranteed that the number of crosses already in each row is at most equal to the number Simon wrote for that row.
+
+\section*{Output}
+Output $n$ lines with $m$ characters each: the fully filled-in grid, where all ``\texttt{.}'' have been replaced
+by either ``\texttt{o}'' or ``\texttt{x}''.
+
+Note that Kattis has a source code size limit of 128kB. For grids of maximum size, it is therefore
+\emph{not} possible to hardcode complete solutions in the code.
+
+\section*{Scoring}
+Your solution will receive points on each of the ten test cases.
+
+Each test case is scored as follows.
+Assume that the value you achieved on the test case is $X$, and
+the minimum value any contestant achieved during the contest is $X_{\min}$.
+If $X_{\min} \ne 0$, let $X_{\min}' = X_{\min}$, otherwise let $X_{\min}'$ be the second best contestant's value on that test case (which is not 0).
+If $X \ge 2X_{\min}'$, the test case is awarded $0$ points, otherwise it is awarded $10(1 - r)$ points, where $r = (X - X_{min}) / (2X_{\min}' - X_{\min})$.
+
+During the contest, $X_{min}$ will be set to a value computed by the judges.
+This means that the scoreboard may temporarily show points up to 200, and it is possible that your points on a test case may be recalculated to 0 after the contest!
+
+\section*{Explanation of Sample 1}
+In the solution to the sample there are 26 vertical three-in-a-rows, 18 horizontal, and 32 diagonal.
+In total, this gives a value of 76.

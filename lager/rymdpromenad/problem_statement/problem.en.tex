@@ -1,0 +1,41 @@
+\problemname{Spacewalk}
+Astronaut Gustav is serving on a space station consisting of $n$ modules connected in a circle so that module $1$ is connected to module $2$, $2$ to $3$, and so on (and module $n$ is connected to module $1$).
+The distance between two adjacent modules is $1$. To create a sort of artificial gravity, the space station rotates at a constant speed around the center of the circle.
+
+The station has been in space for quite a while and it is time to polish the outside of the windows.
+The lot has fallen on Gustav to do this. There are $m$ windows numbered from $1$ to $m$, where window number $i$ is on module number $a_i$.
+For some reason, the windows must be polished in exactly this order. The only entrance and exit to the station is at module $1$.
+
+To travel between modules, there is a rocket-powered window elevator that runs along the outside of the station.
+The window elevator can only travel between adjacent modules, and thus cannot take any shortcuts.
+Gustav wants to choose a path from module $1$, around to all the windows, and back to module $1$.
+Unfortunately, there are two problems: first, the elevator has limited fuel, so Gustav must choose a path that minimizes the distance he travels.
+Furthermore, the elevator's movements affect the space station's rotation, so it must travel equally much clockwise as counterclockwise.
+
+Find the minimum distance Gustav can travel so that he starts at module $1$, visits all windows in the correct order, returns to module $1$, and travels equally much counterclockwise as clockwise.
+
+\section*{Input}
+The first line contains two integers $n$ and $m$ ($3 \leq n \leq 10^5$, $1 \leq m \leq 10^5$), the number of modules and the number of windows.
+The second line contains $m$ integers, the indices of the windows to be polished ($1 \leq a_i \leq n$).
+
+\section*{Output}
+Output one integer, the minimum possible distance.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $10$      & $3 \le n \le 10$, $1 \le m \le 10$ \\ \hline
+  $2$    & $24$      & $3 \le n \le 100$, $1 \le m \le 100$ \\ \hline
+  $3$    & $19$      & $1 \le m \le 1000$  \\ \hline
+  $4$    & $47$      & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+The optimal path here is $1-2^*-3-4^*-3^*-4-5-6^*-5-4-3-2-1$ (the asterisk means a window is polished).
+\section*{Explanation of Sample 2}
+In this example, there is first a window on module $1$, which Gustav can polish without having to go anywhere. Then he goes to module 2,
+polishes the three windows that are there, and goes back.

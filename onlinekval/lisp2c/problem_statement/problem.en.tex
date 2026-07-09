@@ -1,0 +1,47 @@
+\problemname{Lisp to C}
+C is an old programming language from the 70s which, despite its age, is very widely used.
+In the language, function calls to a function with the name \texttt{name} are written in the form \texttt{name(parameter1, parameter2, ..., parameterN)}.
+A parameter can either be a variable (which in our case consists of a sequence of characters \texttt{a-z}), or a function call itself.
+For example, a complete function call can look like this:
+\begin{verbatim}
+a(b, c(d), e(f, g(h, i, j)))
+\end{verbatim}
+A function call without parameters is written as \texttt{function()}.
+
+Lisp is another programming language from the 50s.
+In the language, function calls to a function with the name \texttt{name} are written in the form \texttt{(name parameter1 parameter2 ... parameter N)}.
+Again, a parameter can be a variable or a function call.
+The function call in C described above can instead be written as
+\begin{verbatim}
+(a b (c d) (e f (g h i j)))
+\end{verbatim}
+A function call without parameters is written as \texttt{(function)}.
+
+Why this language history?
+Well, it turns out that judge Simon likes C, but not Lisp.
+Judge Johan, on the other hand, likes Lisp, but not C.
+
+Simon therefore became very upset when Johan programmed all his example solutions in Lisp, and wants to convert Johan's programs to C.
+Help Simon with this by writing a program that, given a function call in Lisp, converts it to a function call in C.
+
+\section*{Input}
+The input consists of one line with a correctly formatted function call in Lisp format, at most $100\,000$ characters long.
+All parameters will be separated by exactly one space, and there are no extra spaces where they are not needed.
+
+\section*{Output}
+Output a single line with the function call converted to C format.
+Include a space after each comma, as in the samples.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $16$      & No parameter in the input is a function call \\ \hline
+  $2$    & $27$      & The calls are nested at most two levels: \texttt{(a (b) (c))} and \texttt{(a (b c))} can occur, but not \texttt{(a (b (c)))} \\ \hline
+  $3$    & $15$      & All calls have at least one parameter, and all variable and function names consist of only one letter \\ \hline
+  $4$    & $28$      & The input is at most $100$ characters long \\ \hline
+  $5$    & $14$      & No additional constraints.  \\ \hline
+\end{tabular}

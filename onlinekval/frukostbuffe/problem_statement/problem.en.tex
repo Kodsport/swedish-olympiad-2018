@@ -1,0 +1,58 @@
+\problemname{Breakfast Buffet}
+Pär and Oskar are eating at a breakfast buffet.
+It consists of $N$ different dishes numbered from $1$ to $N$.
+These are placed in a row on a long table.
+Pär thinks some dishes are tastier than others.
+Therefore, he has given each dish a rating describing how tasty it is.
+The $i$th dish has rating $a_i$.
+
+In the beginning, Pär chooses a dish and eats it. Then Oskar chooses a dish and eats it.
+Both are very hungry, so they always eat everything there is of their chosen dish.
+
+When both have finished eating, they get to choose a new dish.
+Pär and Oskar find it tiresome to walk, so they always choose a dish that is right next to the one they just ate.
+That is, if someone just ate dish $i$, they can choose dish $i-1$ or $i+1$.
+If the new dish has not been eaten, the person who chose it takes it and eats it.
+If it has already been eaten, the person must wait until the next turn.
+In each turn, Pär chooses first.
+
+Pär does not want to be picky, so he will not walk past a dish that is still there without eating it.
+He is also, as mentioned, very hungry, so he always wants to eat at least one dish.
+Both Pär and Oskar have, after eating a dish, the option to loudly exclaim ``I am full!'' and leave the breakfast without eating anything more.
+
+Breakfast is over when all dishes have been eaten or both have left.
+How satisfied Pär is depends on how tasty the dishes he ate were.
+We define his satisfaction as the sum of the ratings of all dishes he ate.
+
+Pär does not know how Oskar will behave.
+Therefore, he wants to know the maximum satisfaction he can guarantee without knowing anything about Oskar's behavior.
+
+\section*{Input}
+The first line contains an integer $N$ ($2 \leq N \leq 3 \cdot 10^5$), the number of dishes in the buffet.
+Then follows a line with $N$ integers $a_1, a_2, \ldots, a_i$ ($-100 \leq a_i \leq 100$), the tastiness of the $i$th dish.
+
+\section*{Output}
+The program shall output one integer: the maximum satisfaction Pär can guarantee.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $25$      & $2 \le N \le 100$, $0 \le a_i \le 100$ \\ \hline
+  $2$    & $25$      & $2 \le N \le 1000$, $0 \le a_i \le 100$ \\ \hline
+  $3$    & $25$      & $0 \le a_i \le 100$ \\ \hline
+  $4$    & $25$      & No additional constraints.  \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+\subsection*{Sample 1}
+If Pär chooses to start by eating one of the dishes worth $3$ or $2$, Oskar could eat all the remaining food. Therefore, Pär instead wants to start in the middle, and can then guarantee a satisfaction of $7$.
+\subsection*{Sample 2}
+The best strategy for Pär is to start with the dish worth 5. Depending on which side Oskar starts on, Pär can get either 8 or 9 satisfaction, so he can guarantee 8.
+\subsection*{Sample 3}
+In the last test group, dishes can be bad and give negative satisfaction. Here too, it is best for Pär to start with the dish worth 5. If Oskar starts to the left of him, Pär can eat the dish worth -1 and then the one worth 2, for a total satisfaction of 6. If Oskar starts to the right of him, Pär can eat -2, 3 and then be full, also for a total satisfaction of 6.
+\subsection*{Sample 4}
+Here all dishes are bad, but Pär must still eat something. Therefore, he chooses the least bad dish, resulting in a satisfaction of -1.

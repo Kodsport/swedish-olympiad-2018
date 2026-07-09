@@ -1,0 +1,36 @@
+\problemname{Company Reputation}
+You have just started a company.
+You know that what the company does is not very popular ---
+each day $i$ during the next $n$ days you expect your reputation to worsen by some given value $r_i$.
+You will then also lose as much money as your reputation is bad.
+During the night you have the opportunity to reset your reputation by renaming the company.
+This can be done any number of times, but costs a fixed sum $k$.
+
+What is the minimum loss you can achieve?
+
+\section*{Input}
+The first line contains two integers $n$ and $k$ ($2 \leq n \leq 4 \cdot 10^5$, $0 \leq k \leq 2 \cdot 10^9$).
+The second line contains $n$ integers $r_i$ ($1 \le r_i \le 10^7$) --- how much your reputation will worsen during day $i$.
+
+\section*{Output}
+Output one integer, the minimum loss you can achieve.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $12$      & $2 \le n \le 20$ \\ \hline
+  $2$    & $17$      & $2 \le n \le 1000$ \\ \hline
+  $3$    & $25$      & $k \le 1000$, $r_i \le 1000$  \\ \hline
+  $4$    & $23$      & All $r_i$ are the same \\ \hline
+  $5$    & $23$      & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+Here it is optimal to rename three times: during the first, second, and third night.
+
+\section*{Explanation of Sample 2}
+Here it is optimal to rename once, during the night between day 15 and day 16.

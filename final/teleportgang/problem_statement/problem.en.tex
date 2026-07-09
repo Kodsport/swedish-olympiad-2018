@@ -1,0 +1,48 @@
+\problemname{Teleportgång}
+You are sitting and programming when the phone suddenly rings. It is your friend Erik who needs help with a problem.
+He is stuck in a cave with several rooms, where certain pairs of rooms are connected by corridors.
+It takes one second to walk between two connected rooms. Erik is in a room and wants to know
+how quickly he can get to the exit. ``Easy peasy'' you think, and start writing
+your favorite shortest path algorithm. But then you remember that Erik has an unusual ability -- he can teleport.
+
+Erik is at node $s$ in an undirected graph with $n$ nodes and $m$ edges, and he wants to get to the exit at node $t$. In one second he can either walk to
+an adjacent node or teleport. If he teleports, he ends up at a uniformly random node (i.e.\ the probability is $\frac{1}{n}$ for all nodes).
+Your task is to compute the minimum possible average time for him to reach node $t$. In other words, you should find the minimum \textit{expected value}.\\
+
+Here is a brief introduction to expected values. Let us say that Erik has chosen a certain strategy, and let $p_i$ be the probability that he
+reaches node $t$ in exactly $i$ seconds if he follows the strategy. The expected value is defined as
+$$1\cdot p_1 + 2\cdot p_2 + 3\cdot p_3 + ...$$
+If you choose a bad strategy (e.g.\ walking back and forth between two nodes and never arriving), the expected value can become infinitely large.
+However, it is always possible to achieve a finite expected value -- if you for example teleport over and over, the expected value is $n$.
+
+\section*{Input}
+The first line contains two integers $n$ and $m$ ($2 \leq n \leq 10^5$, $0 \leq m \leq 2\cdot 10^5$).
+The second line contains two integers $s$ and $t$ ($1 \leq s,t \leq n$, $s \neq t$): the starting node and the exit.
+The following $m$ lines contain two integers $u_i$ and $v_i$ ($1 \leq u_i, v_i \leq n$, $u_i \neq v_i$),
+meaning that an edge connects nodes $u_i$ and $v_i$. Furthermore, there is at most one edge between each pair of nodes.
+
+\section*{Output}
+Print a single number: the minimum possible expected value of the time it takes to reach the exit.
+The answer is considered correct if it has a relative or absolute error of at most $10^{-2}$.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Group & Points & Constraints \\ \hline
+    $1$   & $26$     & $2 \le n \le 10$, $0 \le m \le 20$ \\ \hline
+    $2$   & $35$     & $2 \le n \le 200$, $0 \le m \le 400$ \\ \hline
+    $3$   & $39$     & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+Here the best strategy is to simply walk directly to the exit, which takes $2$ seconds. The expected value is thus $2$.
+
+\section*{Explanation of Sample 2}
+Here there are no edges at all, so the only thing you can do is teleport over and over, and the expected value is then $n$.
+
+\section*{Explanation of Sample 3}
+Here the best strategy is to teleport if you are at node 4, but walk directly to the exit if you are at node 1 or 3.
